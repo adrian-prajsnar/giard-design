@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.expanded {
+  width: 12rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.linear-gradient {
+  background: rgb(214, 183, 158);
+  background: linear-gradient(
+    180deg,
+    rgba(214, 183, 158, 0) 0%,
+    rgba(220, 193, 171, 1) 100%
+  );
+}

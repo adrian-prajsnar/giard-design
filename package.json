@@ -1,0 +1,15 @@
+{
+  "name": "giard-design",
+  "version": "1.0.0",
+  "description": "GiardDesign - your modern garden.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "author": "Adrian Prajsnar",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}

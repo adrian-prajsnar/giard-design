@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html class="overflow-x-hidden scroll-smooth" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <script defer type="module" src="./src/script.js"></script>
+    <script
+      defer
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      defer
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <title>GiardDesign - Twój nowoczesny ogród!</title>
+  </head>
+  <body
+    class="relative font-inter overflow-x-hidden text-black-lighter bg-white"
+  >
+    <header
+      id="section-header"
+      class="fixed w-full h-[4.5rem] z-10 bg-white-opacity"
+    >
+      <nav
+        class="h-[4.5rem] max-w-[78.875rem] py-6 m-auto flex items-center justify-between"
+      >
+        <a href="#">
+          <img
+            src="./src/assets/giard-design-logo.png"
+            alt="Logo firmy Giard Design"
+          />
+        </a>
+        <ul class="flex items-center justify-center gap-12 text-sm">
+          <li class="group relative" tabindex="0">
+            <div
+              class="flex items-center justify-center gap-[0.3125rem] cursor-pointer hover:text-beige-darker duration-300"
+            >
+              <span>Oferta</span
+              ><ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+            <div
+              class="invisible absolute w-64 h-0 py-0 px-4 top-16 left-1/2 text-center transform -translate-x-1/2 opacity-0 group-hover:h-[11.625rem] group-hover:py-4 group-hover:opacity-100 group-hover:delay-0 group-hover:visible transition-all delay-300 duration-300 bg-white-opacity border-green border-solid border-l-0 border-r-0 border-t-2 border-b-4 overflow-hidden"
+            >
+              <span class="text-base font-semibold">Działamy kompleksowo!</span>
+              <ul class="flex flex-col gap-2 list-none my-3">
+                <li>&rarr; Projekty</li>
+                <li>&rarr; Wizualizacje</li>
+                <li>&rarr; Realizacje</li>
+              </ul>
+              <a
+                class="text-base text-green font-semibold pb-1 border-b border-transparent hover:border-green transition-all duration-300"
+                href="#section-offer"
+                >Sprawdź naszą ofertę</a
+              >
+            </div>
+          </li>
+          <li class="hover:text-beige-darker duration-300">
+            <a href="#section-about">O firmie</a>
+          </li>
+          <li class="hover:text-beige-darker duration-300">
+            <a href="#section-realisations">Realizacje</a>
+          </li>
+          <li class="hover:text-beige-darker duration-300">
+            <a href="#section-footer">Kontakt</a>
+          </li>
+          <li class="flex items-center justify-center gap-2 -ml-1">
+            <input
+              class="search-input invisible w-0 px-0 py-1 border-b-2 border-beige outline-none transition-width duration-300 ease-in-out break-all bg-transparent font-semibold placeholder:font-normal"
+              type="text"
+              placeholder="Szukaj..."
+              minlength="3"
+              maxlength="30"
+            />
+            <ion-icon
+              class="magnifier cursor-pointer text-2xl hover:text-beige-darker duration-300"
+              name="search-outline"
+              tabindex="0"
+            ></ion-icon>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section
+      id="section-intro"
+      class="flex items-center justify-end gap-16 bg-beige mt-[4.5rem]"
+    >
+      <div
+        class="flex flex-col items-center gap-[4.5rem] w-[37.5rem] mx-auto pl-16"
+      >
+        <div class="flex items-center justify-center flex-col gap-11">
+          <h1 class="font-montserrat text-6xl font-medium leading-[1.15]">
+            Nowoczesna aranżacja <br />
+            Twojego ogrodu
+          </h1>
+          <p class="text-base">
+            Marka GiardDesign to wieloletnie doświadczenie i&nbsp;wysoka
+            estetyka realizacji. Oferujemy kompleksowy zakres usług
+            z&nbsp;indywidualnym podejściem do każdego projektu.
+          </p>
+        </div>
+        <div
+          class="flex items-center justify-center gap-9 ml-0 mr-auto text-base"
+        >
+          <button tabindex="-1">
+            <a
+              class="bg-green text-white-darker border border-solid border-green rounded-3xl pt-3 pb-3.5 px-[1.375rem] block hover:bg-green-darker hover:border-green-lighter transition-colors duration-300"
+              href="#section-footer"
+            >
+              <span>Skontaktuj się z nami</span>
+            </a>
+          </button>
+          <button tabindex="-1">
+            <a
+              class="bg-beige text-green border border-solid border-green rounded-3xl pt-3 pb-3.5 px-[1.375rem] flex items-center gap-2 hover:text-white-darker hover:bg-green transition-colors duration-300"
+              href="#section-realisations"
+            >
+              <span>Zobacz nasze Realizacje</span>
+              <ion-icon class="text-lg" name="arrow-down-outline"></ion-icon>
+            </a>
+          </button>
+        </div>
+      </div>
+
+      <div class="slider relative overflow-hidden">
+        <figure>
+          <img
+            src="src/assets/slider-images/slider-1.png"
+            alt="Zdjęcie zaprojektowanego ogrodu"
+            class="slide top-0 right-0 w-full h-full flex items-center justify-center transition-transform duration-500"
+          />
+        </figure>
+        <figure>
+          <img
+            src="src/assets/slider-images/slider-2.jpg"
+            alt="Zdjęcie zaprojektowanego ogrodu"
+            class="slide absolute top-0 right-0 w-full h-full flex items-center justify-center transition-transform duration-500"
+          />
+        </figure>
+        <figure>
+          <img
+            src="src/assets/slider-images/slider-3.jpg"
+            alt="Zdjęcie zaprojektowanego ogrodu"
+            class="slide absolute top-0 right-0 w-full h-full flex items-center justify-center transition-transform duration-500"
+          />
+        </figure>
+        <figure>
+          <img
+            src="src/assets/slider-images/slider-4.jpg"
+            alt="Zdjęcie zaprojektowanego ogrodu"
+            class="slide absolute top-0 right-0 w-full h-full flex items-center justify-center transition-transform duration-500"
+          />
+        </figure>
+        <figure>
+          <img
+            src="src/assets/slider-images/slider-5.jpg"
+            alt="Zdjęcie zaprojektowanego ogrodu"
+            class="slide absolute top-0 right-0 w-full h-full flex items-center justify-center transition-transform duration-500"
+          />
+        </figure>
+        <figure>
+          <img
+            src="src/assets/slider-images/slider-6.jpg"
+            alt="Zdjęcie zaprojektowanego ogrodu"
+            class="slide absolute top-0 right-0 w-full h-full flex items-center justify-center transition-transform duration-500"
+          />
+        </figure>
+        <figure>
+          <img
+            src="src/assets/slider-images/slider-7.jpg"
+            alt="Zdjęcie zaprojektowanego ogrodu"
+            class="slide absolute top-0 right-0 w-full h-full flex items-center justify-center transition-transform duration-500"
+          />
+        </figure>
+        <figure>
+          <img
+            src="src/assets/slider-images/slider-8.jpg"
+            alt="Zdjęcie zaprojektowanego ogrodu"
+            class="slide absolute top-0 right-0 w-full h-full flex items-center justify-center transition-transform duration-500"
+          />
+        </figure>
+        <figure>
+          <img
+            src="src/assets/slider-images/slider-9.jpg"
+            alt="Zdjęcie zaprojektowanego ogrodu"
+            class="slide absolute top-0 right-0 w-full h-full flex items-center justify-center transition-transform duration-500"
+          />
+        </figure>
+
+        <div
+          class="slider-dots-container absolute left-1/2 -translate-x-1/2 bottom-7 px-4 py-2 rounded-lg flex items-center justify-center gap-1 h-auto w-auto bg-black-opacity"
+        >
+          <!-- Button dots added dinamically from JS -->
+          <!-- Classes has to be pre-added in case of Tailwind / slider-dot w-3 h-3 border-2 border-solid border-white-darker rounded-full -->
+        </div>
+
+        <div
+          class="absolute right-0 bottom-0 flex items-center justify-center gap-8 py-6 px-8 bg-white-darker rounded-tl-lg"
+        >
+          <button
+            class="slider-btn-left flex text-4xl hover:-translate-x-2 transition-transform duration-300"
+          >
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </button>
+          <button
+            class="slider-btn-right flex text-4xl hover:translate-x-2 transition-transform duration-300"
+          >
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="section-offer"
+      class="bg-white-darker flex flex-col items-center gap-24 pt-[7.5rem] pb-40"
+    >
+      <div class="max-w-[65rem] m-auto flex flex-col gap-4">
+        <span class="text-xs text-green font-semibold">Oferta</span>
+        <div class="flex flex-col gap-8 max-w-[45rem]">
+          <h2 class="font-montserrat text-5xl font-medium">
+            Działamy <span class="inter italic">kompleksowo</span>
+          </h2>
+          <p class="text-base">
+            Oferujemy kompletną obsługę inwestycji terenów zielonych.
+            Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne.
+            Stworzymy dla Ciebie projekt, zwizualizujemy go i&nbsp;wcielimy
+            w&nbsp;życie, a&nbsp;na każdym etapie posłużymy radą i&nbsp;
+            wieloletnim doświadczeniem.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-wrap items-center justify-center gap-16 px-[5.5rem]"
+      >
+        <div
+          class="w-[23.625rem] h-[23.125rem] flex items-start flex-col justify-between px-10 py-12 bg-white rounded-3xl hover:-translate-y-10 transition-transform duration-500"
+        >
+          <div class="flex flex-col gap-8">
+            <div class="h-11 w-auto flex items-center">
+              <img
+                src="./src/assets/icon-projects.png"
+                alt=""
+                aria-hidden="true"
+              />
+            </div>
+            <div class="flex flex-col gap-3">
+              <h3 class="font-montserrat text-[1.75rem]">Projekty</h3>
+              <p class="text-sm">
+                Zaprojektujemy Twój ogród w nowoczesnym stylu
+                i&nbsp;z&nbsp;najlepszym wykorzystaniem istniejącej przestrzeni.
+              </p>
+            </div>
+          </div>
+
+          <button tabindex="0">
+            <a
+              href="#"
+              class="flex items-center justify-center gap-2.5 pb-1 text-green border-b border-solid border-green hover:border-transparent transition-all duration-300"
+              ><span>Dowiedz się więcej</span>
+              <ion-icon class="text-lg" name="arrow-forward-outline"></ion-icon>
+            </a>
+          </button>
+        </div>
+
+        <div
+          class="w-[23.625rem] h-[23.125rem] flex items-start flex-col justify-between px-10 py-12 bg-white rounded-3xl hover:-translate-y-10 transition-transform duration-500"
+        >
+          <div class="flex flex-col gap-8">
+            <div class="h-11 w-auto flex items-center">
+              <img
+                src="./src/assets/icon-visualizations.png"
+                alt=""
+                aria-hidden="true"
+              />
+            </div>
+            <div class="flex flex-col gap-3">
+              <h3 class="font-montserrat text-[1.75rem]">Wizualizacje</h3>
+              <p class="text-sm">
+                Przedstawimy Ci projekty koncepcyjne w&nbsp;postaci wirtualnego
+                spaceru animowanego w technologii 3D.
+              </p>
+            </div>
+          </div>
+
+          <button tabindex="0">
+            <a
+              href="#"
+              class="flex items-center justify-center gap-2.5 pb-1 text-green border-b border-solid border-green hover:border-transparent transition-all duration-300"
+              ><span>Dowiedz się więcej</span>
+              <ion-icon class="text-lg" name="arrow-forward-outline"></ion-icon
+            ></a>
+          </button>
+        </div>
+
+        <div
+          class="w-[23.625rem] h-[23.125rem] flex items-start flex-col justify-between px-10 py-12 bg-white rounded-3xl hover:-translate-y-10 transition-transform duration-500"
+        >
+          <div class="flex flex-col gap-8">
+            <div class="h-11 w-auto flex items-center">
+              <img
+                src="./src/assets/icon-realisations.png"
+                alt=""
+                aria-hidden="true"
+              />
+            </div>
+            <div class="flex flex-col gap-3">
+              <h3 class="font-montserrat text-[1.75rem]">Realizacje</h3>
+              <p class="text-sm">
+                Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań
+                i&nbsp; zaawansowanych technologii.
+              </p>
+            </div>
+          </div>
+
+          <button tabindex="0">
+            <a
+              href="#"
+              class="flex items-center justify-center gap-2.5 pb-1 text-green border-b border-solid border-green hover:border-transparent transition-all duration-300"
+              ><span>Zobacz nasze realizacje</span>
+              <ion-icon class="text-lg" name="arrow-forward-outline"></ion-icon
+            ></a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="section-about"
+      class="flex items-center bg-green text-white-darker"
+    >
+      <div>
+        <img
+          src="src/assets/section-about-img.png"
+          alt="Widok ładnie zaprojektowanego domu z ogrodem"
+          class="w-full h-full"
+        />
+      </div>
+
+      <div class="w-[37.25rem] flex flex-col gap-[4.5rem] px-12 m-auto">
+        <div class="flex flex-col gap-4">
+          <span class="text-xs">O firmie</span>
+          <div class="flex flex-col gap-10">
+            <h2 class="font-montserrat text-5xl">
+              Tworzymy z&nbsp;<span class="font-inter italic">pasją</span>
+            </h2>
+            <p class="text-base">
+              Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
+              wykwalifikowani projektanci oraz architekci, których zadaniem jest
+              rozpoznanie i&nbsp;realizacja potrzeb każdego Klienta. Nasza
+              specjalizacja to przestrzenie nowoczesne, które charakteryzuje
+              minimalizm, geometria i&nbsp;elegancka prostota. Tworzymy ogrody
+              małoobsługowe, dostosowane do współczesnego trybu życia.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <button
+            class="flex items-center gap-2 px-[1.375rem] pt-3 pb-3.5 border border-solid rounded-3xl hover:bg-green-darker transition-colors duration-300 group"
+          >
+            <span>Poznaj nas bliżej</span>
+            <ion-icon
+              class="text-lg group-hover:translate-x-2 transition-all duration-300"
+              name="arrow-forward-outline"
+            ></ion-icon>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="section-realisations"
+      class="bg-beige flex flex-col gap-24 pt-[7.5rem] pb-11 overflow-hidden"
+    >
+      <div class="flex flex-col gap-4 pl-40">
+        <span class="text-xs text-green font-semibold">Realizacje</span>
+        <h2 class="text-5xl font-montserrat font-medium">
+          Nasze <span class="font-inter italic">projekty</span>
+        </h2>
+      </div>
+
+      <div
+        class="gallery relative grid grid-cols-4 gap-8 px-16 1600:grid-cols-3 transition-[height] duration-1000"
+      >
+        <button
+          class="gallery-item overflow-hidden opacity-0 translate-x-1/2 transition-all duration-500"
+        >
+          <img
+            src="src/assets/gallery-images/gallery-1.jpg"
+            alt="Zdjęcie pięknie zaprojektowanego ogrodu"
+            class="block w-full h-full hover:scale-110 transition-all duration-500"
+          />
+        </button>
+        <button
+          class="gallery-item overflow-hidden opacity-0 translate-x-1/2 transition-all duration-500"
+        >
+          <img
+            src="src/assets/gallery-images/gallery-2.jpg"
+            alt="Zdjęcie pięknie zaprojektowanego ogrodu"
+            class="block w-full h-full hover:scale-110 transition-all duration-500"
+          />
+        </button>
+        <button
+          class="gallery-item overflow-hidden opacity-0 translate-x-1/2 transition-all duration-500"
+        >
+          <img
+            src="src/assets/gallery-images/gallery-3.jpg"
+            alt="Zdjęcie pięknie zaprojektowanego ogrodu"
+            class="block w-full h-full hover:scale-110 transition-all duration-500"
+          />
+        </button>
+        <button
+          class="gallery-item overflow-hidden opacity-0 translate-x-1/2 transition-all duration-500"
+        >
+          <img
+            src="src/assets/gallery-images/gallery-4.jpg"
+            alt="Zdjęcie pięknie zaprojektowanego ogrodu"
+            class="block w-full h-full hover:scale-110 transition-all duration-500"
+          />
+        </button>
+        <button
+          class="gallery-item overflow-hidden opacity-0 translate-x-1/2 transition-all duration-500"
+        >
+          <img
+            src="src/assets/gallery-images/gallery-5.jpg"
+            alt="Zdjęcie pięknie zaprojektowanego ogrodu"
+            class="block w-full h-full hover:scale-110 transition-all duration-500"
+          />
+        </button>
+        <button
+          class="gallery-item overflow-hidden opacity-0 translate-x-1/2 transition-all duration-500"
+        >
+          <img
+            src="src/assets/gallery-images/gallery-6.jpg"
+            alt="Zdjęcie pięknie zaprojektowanego ogrodu"
+            class="block w-full h-full hover:scale-110 transition-all duration-500"
+          />
+        </button>
+        <button
+          class="gallery-item overflow-hidden opacity-0 translate-x-1/2 transition-all duration-500"
+        >
+          <img
+            src="src/assets/gallery-images/gallery-7.jpg"
+            alt="Zdjęcie pięknie zaprojektowanego ogrodu"
+            class="block w-full h-full hover:scale-110 transition-all duration-500"
+          />
+        </button>
+        <button
+          class="gallery-item overflow-hidden opacity-0 translate-x-1/2 transition-all duration-500"
+        >
+          <img
+            src="src/assets/gallery-images/gallery-8.jpg"
+            alt="Zdjęcie pięknie zaprojektowanego ogrodu"
+            class="block w-full h-full hover:scale-110 transition-all duration-500"
+          />
+        </button>
+        <button
+          class="gallery-item overflow-hidden opacity-0 translate-x-1/2 transition-all duration-500"
+        >
+          <img
+            src="src/assets/gallery-images/gallery-9.jpg"
+            alt="Zdjęcie pięknie zaprojektowanego ogrodu"
+            class="block w-full h-full hover:scale-110 transition-all duration-500"
+          />
+        </button>
+        <button
+          class="gallery-item overflow-hidden opacity-0 translate-x-1/2 transition-all duration-500"
+        >
+          <img
+            src="src/assets/gallery-images/gallery-10.jpg"
+            alt="Zdjęcie pięknie zaprojektowanego ogrodu"
+            class="block w-full h-full hover:scale-110 transition-all duration-500"
+          />
+        </button>
+        <button
+          class="gallery-item overflow-hidden opacity-0 translate-x-1/2 transition-all duration-500"
+        >
+          <img
+            src="src/assets/gallery-images/gallery-11.jpg"
+            alt="Zdjęcie pięknie zaprojektowanego ogrodu"
+            class="block w-full h-full hover:scale-110 transition-all duration-500"
+          />
+        </button>
+        <button
+          class="gallery-item overflow-hidden opacity-0 translate-x-1/2 transition-all duration-500"
+        >
+          <img
+            src="src/assets/gallery-images/gallery-12.jpg"
+            alt="Zdjęcie pięknie zaprojektowanego ogrodu"
+            class="block w-full h-full hover:scale-110 transition-all duration-500"
+          />
+        </button>
+        <div
+          class="linear-gradient w-full h-1/2 absolute left-0 bottom-0"
+        ></div>
+        <button
+          class="btn-expand-gallery absolute left-1/2 -translate-x-1/2 bottom-11 flex items-center gap-2 px-[1.375rem] pt-3 pb-3.5 text-base border border-solid rounded-3xl hover:text-green transition-colors duration-300"
+        >
+          <span>Rozwiń</span>
+          <ion-icon class="text-lg" name="arrow-down-outline"></ion-icon>
+        </button>
+      </div>
+    </section>
+  </body>
+</html>
