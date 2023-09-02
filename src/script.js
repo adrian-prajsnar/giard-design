@@ -103,7 +103,7 @@ btnExpandGallery.addEventListener('click', () => {
           class="gallery-item overflow-hidden opacity-0 translate-x-1/2 transition-all duration-500"
         >
           <img
-            src="src/assets/gallery-images/gallery-${i}.jpg"
+            src="src/assets/gallery-images/gallery-${i}.webp"
             alt="Zdjęcie pięknie zaprojektowanego ogrodu"
             class="block w-full h-full hover:scale-110 transition-all duration-500"
           />
