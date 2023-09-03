@@ -99,21 +99,26 @@ const gradient = document.querySelector('.linear-gradient');
 btnExpandGallery.addEventListener('click', () => {
   for (let i = 13; i <= 24; i++) {
     const galleryItem = `
-        <button
-          class="gallery-item overflow-hidden opacity-0 translate-x-1/2 transition-all duration-500"
-        >
-          <img
-            src="src/assets/gallery-images/gallery-${i}.webp"
-            alt="Zdjęcie pięknie zaprojektowanego ogrodu"
-            class="block w-full h-full hover:scale-110 transition-all duration-500"
-          />
-        </button>
+    <button
+      class="gallery-item blur-load bg-cover bg-center overflow-hidden opacity-0  translate-x-1/2 transition-all duration-500"
+      style="
+        background-image: url(src/assets/gallery-images/gallery-${i}-small.webp);
+      "
+    >
+      <img
+        src="src/assets/gallery-images/gallery-${i}.webp"
+        alt="Zdjecie pięknie zaprojektowanego ogrodu"
+        class="block w-full h-full object-center object-cover opacity-0 hover:scale-110 transition-all duration-500"
+        loading="lazy"
+      />
+    </button>
    `;
     gallery.insertAdjacentHTML('beforeend', galleryItem);
   }
   gradient.classList.add('invisible');
   btnExpandGallery.classList.add('invisible');
   loadGalleryItems();
+  lazyLoadGalleryItems();
 });
 
 function loadGalleryItems() {
@@ -134,3 +139,20 @@ function loadGalleryItems() {
 }
 
 loadGalleryItems();
+
+function lazyLoadGalleryItems() {
+  const blurBg = document.querySelectorAll('.blur-load');
+
+  blurBg.forEach(bg => {
+    const img = bg.querySelector('img');
+
+    function loaded() {
+      bg.classList.add('loaded');
+    }
+
+    if (img.complete) loaded();
+    else img.addEventListener('load', loaded);
+  });
+}
+
+lazyLoadGalleryItems();

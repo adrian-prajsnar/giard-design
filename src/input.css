@@ -4,14 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .expanded {
   width: 12rem;
   padding: 0.25rem 0.5rem;
@@ -24,4 +16,13 @@
     rgba(214, 183, 158, 0) 0%,
     rgba(220, 193, 171, 1) 100%
   );
+}
+
+/* LAZY LOADING IMAGES */
+.blur-load.loaded > img {
+  opacity: 1;
+}
+.blur-load > img {
+  /* opacity: 0; */
+  /* transition: opacity 200ms ease-in-out; */
 }
