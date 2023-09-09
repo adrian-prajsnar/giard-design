@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-export const content = ['index.html'];
+export const content = ['./index.html', './src/**/*.{js,ts,jsx,tsx}'];
 
 export const theme = {
   screens: {
@@ -20,14 +20,16 @@ export const theme = {
     current: 'currentColor',
     'black-lighter': '#111',
     'black-opacity': 'rgb(0,0,0,0.5)',
+    'black-overlay': 'rgb(0,0,0,0.9)',
     white: '#fff',
     'white-opacity': 'rgb(255, 255, 255, 0.9)',
     'white-darker': '#F5F0EC',
     green: '#1B5B31',
     'green-lighter': '#326b46',
-    // #2E8540
     'green-darker': '#18522c',
+    'green-contrast': '#2E8540',
     beige: '#DCC1AB',
+    'beige-transparent': '#d6b79e00',
     'beige-darker': '#9a8778',
   },
   extend: {
@@ -36,7 +38,16 @@ export const theme = {
       montserrat: ['Montserrat', 'sans-serif'],
     },
     transitionProperty: {
-      width: 'width, padding',
+      'search-input': 'width, padding, border',
+    },
+    cursor: {
+      magnifier: 'url(/src/assets/magnifier-cursor-24.png), zoom-in',
+    },
+    animation: {
+      'logo-load': 'logo-load 300ms forwards 0ms  ease-in',
+      'nav-links-load': 'nav-links-load 300ms forwards 300ms ease-in',
+      'intro-text-load': 'intro-text-load 300ms forwards 600ms ease-out',
+      'intro-slider-load': 'intro-slider-load 300ms forwards 900ms ease-in-out',
     },
   },
 };
