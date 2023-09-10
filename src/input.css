@@ -7,18 +7,24 @@
 @layer utilities {
   :focus-visible {
     outline: none;
-    box-shadow: 0 0 0 8px rgb(27, 91, 49, 0.5);
+    box-shadow: 0 0 0 5px rgb(27, 91, 49, 0.5);
     transition: all 300ms ease-in;
   }
 
   .btn-meet-us:focus-visible,
   .btn-instagram:focus-visible {
-    box-shadow: 0 0 0 8px rgb(220, 193, 171, 0.5);
+    box-shadow: 0 0 0 5px rgb(220, 193, 171, 0.5);
   }
 
   #search-input:focus-visible {
     box-shadow: none;
     border-bottom-color: #1b5b31;
+  }
+
+  .slider-dot:focus-visible {
+    box-shadow: none;
+    border-color: #f5f0ec;
+    background-color: #f5f0ec;
   }
 
   /* LAZY LOADING IMAGES */

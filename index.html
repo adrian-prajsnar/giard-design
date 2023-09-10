@@ -43,7 +43,7 @@
         >
           <li class="group relative">
             <button
-              class="flex items-center justify-center gap-[0.3125rem] cursor-pointer hover:text-beige-darker duration-300"
+              class="flex items-center justify-center gap-[0.3125rem] cursor-pointer hover:text-beige-darker transition-all duration-300"
             >
               <span>Oferta</span
               ><ion-icon name="chevron-down-outline"></ion-icon>
@@ -64,13 +64,13 @@
               >
             </div>
           </li>
-          <li class="hover:text-beige-darker duration-300">
+          <li class="hover:text-beige-darker transition-all duration-300">
             <a href="#section-about">O firmie</a>
           </li>
-          <li class="hover:text-beige-darker duration-300">
+          <li class="hover:text-beige-darker transition-all duration-300">
             <a href="#section-realisations">Realizacje</a>
           </li>
-          <li class="hover:text-beige-darker duration-300">
+          <li class="hover:text-beige-darker transition-all duration-300">
             <a href="#section-footer">Kontakt</a>
           </li>
           <li class="">
@@ -672,7 +672,7 @@
       <span class="bg-beige absolute left-0 bottom-0 w-full h-11"></span>
 
       <div
-        class="gallery-popup fixed left-0 top-0 w-full h-full z-20 invisible opacity-0 flex items-center justify-center"
+        class="gallery-popup fixed left-0 top-0 w-full h-full z-30 invisible opacity-0 flex items-center justify-center"
       >
         <img
           src="src/assets/gallery-images/gallery-1.webp"
@@ -700,23 +700,24 @@
       </div>
 
       <span
-        class="popup-overlay fixed left-0 top-0 w-full h-full z-10 bg-black-overlay invisible opacity-0 transition-all duration-300"
+        class="popup-overlay fixed left-0 top-0 w-full h-full z-20 bg-black-overlay invisible opacity-0 transition-all duration-300"
       ></span>
     </section>
 
     <section
       id="section-instagram"
-      class="bg-white-darker text-white-darker py-[3.75rem]"
+      class="bg-white-darker text-white-darker py-[3.75rem] overflow-hidden"
     >
       <div
-        class="bg-green max-w-[65rem] m-auto flex items-center gap-16 py-[7.5rem] px-[6.875rem]"
+        class="group relative bg-green max-w-[65rem] m-auto flex items-center gap-16 py-[7.5rem] px-[6.875rem] overflow-hidden"
       >
-        <h4 class="font-montserrat text-[2.5rem] tracking-[-2px]">
+        <h4 class="font-montserrat text-[2.5rem] tracking-[-2px] z-10">
           Zostańmy w kontakcie! Znajdziesz nas na
           <span class="font-inter font-medium italic tracking-[1px]"
             >Instagramie</span
           >.
         </h4>
+
         <div class="flex flex-col items-start gap-6 min-w-[9.8125rem]">
           <span class="text-base tracking-[-1px]"
             >Śledź nasze <br />
@@ -730,6 +731,63 @@
               >Instagram</a
             >
           </button>
+        </div>
+
+        <div
+          class="blur-load bg-cover bg-center absolute left-5 top-[360px] h-40 w-40 z-0 opacity-50 group-hover:top-5 transition-all duration-300 delay-500 ease-in"
+          style="
+            background-image: url(src/assets/gallery-images/gallery-2-small.webp);
+          "
+        >
+          <img
+            class="object-center object-cover opacity-0"
+            src="src/assets/gallery-images/gallery-2.webp"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+          />
+        </div>
+        <div
+          class="blur-load bg-cover bg-center absolute left-[200px] top-[440px] -translate-y-1/2 h-40 w-40 z-0 opacity-50 group-hover:top-1/2 transition-all duration-300 delay-300 ease-in"
+          style="
+            background-image: url(src/assets/gallery-images/gallery-11-small.webp);
+          "
+        >
+          <img
+            class="object-center object-cover opacity-0"
+            src="src/assets/gallery-images/gallery-11.webp"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+          />
+        </div>
+        <div
+          class="blur-load bg-cover bg-center absolute left-[380px] -bottom-[160px] h-40 w-40 z-0 opacity-50 group-hover:bottom-0 transition-all duration-300 delay-0 ease-in group-hover:delay-500"
+          style="
+            background-image: url(src/assets/gallery-images/gallery-7-small.webp);
+          "
+        >
+          <img
+            class="object-center object-cover opacity-0"
+            src="src/assets/gallery-images/gallery-7.webp"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+          />
+        </div>
+        <div
+          class="blur-load bg-cover bg-center absolute left-[400px] top-[360px] h-40 w-40 z-0 opacity-50 group-hover:top-0 transition-all duration-300 delay-300 ease-in"
+          style="
+            background-image: url(src/assets/gallery-images/gallery-3-small.webp);
+          "
+        >
+          <img
+            class="object-center object-cover opacity-0"
+            src="src/assets/gallery-images/gallery-3.webp"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>

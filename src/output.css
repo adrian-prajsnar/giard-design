@@ -556,6 +556,10 @@ video {
   bottom: -1.25rem;
 }
 
+.-bottom-\[160px\]{
+  bottom: -160px;
+}
+
 .-left-6{
   left: -1.5rem;
 }
@@ -588,6 +592,22 @@ video {
   left: 50%;
 }
 
+.left-5{
+  left: 1.25rem;
+}
+
+.left-\[200px\]{
+  left: 200px;
+}
+
+.left-\[380px\]{
+  left: 380px;
+}
+
+.left-\[400px\]{
+  left: 400px;
+}
+
 .right-0{
   right: 0px;
 }
@@ -610,6 +630,18 @@ video {
 
 .top-16{
   top: 4rem;
+}
+
+.top-\[360px\]{
+  top: 360px;
+}
+
+.top-\[440px\]{
+  top: 440px;
+}
+
+.z-0{
+  z-index: 0;
 }
 
 .z-10{
@@ -707,6 +739,10 @@ video {
   height: 0.75rem;
 }
 
+.h-40{
+  height: 10rem;
+}
+
 .h-\[150\%\]{
   height: 150%;
 }
@@ -753,6 +789,10 @@ video {
 
 .w-3{
   width: 0.75rem;
+}
+
+.w-40{
+  width: 10rem;
 }
 
 .w-48{
@@ -1419,6 +1459,10 @@ video {
   opacity: 1;
 }
 
+.opacity-50{
+  opacity: 0.5;
+}
+
 .outline-none{
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1472,8 +1516,16 @@ video {
   transition-duration: 150ms;
 }
 
+.delay-0{
+  transition-delay: 0s;
+}
+
 .delay-300{
   transition-delay: 300ms;
+}
+
+.delay-500{
+  transition-delay: 500ms;
 }
 
 .duration-1000{
@@ -1488,24 +1540,34 @@ video {
   transition-duration: 500ms;
 }
 
+.ease-in{
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
 .ease-in-out{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 :focus-visible {
   outline: none;
-  box-shadow: 0 0 0 8px rgb(27, 91, 49, 0.5);
+  box-shadow: 0 0 0 5px rgb(27, 91, 49, 0.5);
   transition: all 300ms ease-in;
 }
 
 .btn-meet-us:focus-visible,
   .btn-instagram:focus-visible {
-  box-shadow: 0 0 0 8px rgb(220, 193, 171, 0.5);
+  box-shadow: 0 0 0 5px rgb(220, 193, 171, 0.5);
 }
 
 #search-input:focus-visible {
   box-shadow: none;
   border-bottom-color: #1b5b31;
+}
+
+.slider-dot:focus-visible {
+  box-shadow: none;
+  border-color: #f5f0ec;
+  background-color: #f5f0ec;
 }
 
 /* LAZY LOADING IMAGES */
@@ -1681,8 +1743,24 @@ video {
   right: -0px;
 }
 
+.group:hover .group-hover\:bottom-0{
+  bottom: 0px;
+}
+
 .group:hover .group-hover\:left-0{
   left: 0px;
+}
+
+.group:hover .group-hover\:top-0{
+  top: 0px;
+}
+
+.group:hover .group-hover\:top-1\/2{
+  top: 50%;
+}
+
+.group:hover .group-hover\:top-5{
+  top: 1.25rem;
 }
 
 .group:hover .group-hover\:h-\[11\.625rem\]{
@@ -1710,6 +1788,10 @@ video {
 
 .group:hover .group-hover\:delay-0{
   transition-delay: 0s;
+}
+
+.group:hover .group-hover\:delay-500{
+  transition-delay: 500ms;
 }
 
 @media (max-width: 1600px){
