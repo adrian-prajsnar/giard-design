@@ -3,8 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/output.css" />
-    <script defer type="module" src="./src/script.js"></script>
+
+    <meta
+      name="description"
+      content="Uwolnij potencjał swojego ogrodu dzięki
+    kreatywnemu projektowaniu nowoczesnych ogrodów. Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompletną obsługę inwestycji terenów zielonych. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie posłużymy radą i wieloletnim doświadczeniem."
+    />
+
+    <meta
+      name="keywords"
+      content="nowoczesne ogrody, projektowanie ogrodów, GiardDesign, obsługa inwestycji terenów zielonych, wizualizacja projektu ogrodu, realizacja projektu ogrodu, ogrodnicze doradztwo projektowe, doświadczenie w projektowaniu ogrodów, przestrzenie zielone"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="./public/favicon/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="apple-touch-icon" href="" type="image/x-icon" />
+    <link rel="manifest" href="./public/favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="./src/styles/output.css" />
+    <script defer type="module" src="./src/scripts/script.js"></script>
+
     <script
       defer
       type="module"
@@ -15,117 +36,160 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <title>GiardDesign - Twój nowoczesny ogród!</title>
+
+    <title>GiardDesign &ndash; Twój nowoczesny ogród!</title>
   </head>
   <body
     class="relative font-inter overflow-x-hidden text-black-lighter bg-white"
   >
-    <!-- <div
-      id="jurek"
-      class="fixed left-0 top-0 bg-white-darker w-screen h-screen z-30 opacity-100 transition-opacity duration-300"
-    ></div> -->
-
     <header
       id="section-header"
-      class="fixed w-full z-10 bg-white-opacity mb-[4.875rem]"
+      class="fixed w-full z-20 bg-white-opacity mb-[4.875rem] media-1440:px-12 media-1024:px-8 media-550:px-4 media-360:px-3"
     >
       <nav
-        class="max-w-[78.875rem] py-6 m-auto flex items-center justify-between"
+        class="max-w-[78.875rem] py-6 m-auto flex items-center justify-between media-1024:py-[15px]"
       >
         <a class="opacity-0 animate-logo-load" href="#">
           <img
-            src="./src/assets/logo-giarddesign-black.png"
+            src="./public/assets/images/logo-giarddesign-black.png"
             alt="Logo firmy Giard Design"
           />
         </a>
-        <ul
-          class="flex items-center justify-center gap-12 text-sm animate-nav-links-load opacity-0"
+
+        <div
+          class="nav-mobile media-1024:fixed media-1024:bottom-0 media-1024:top-0 media-1024:left-0 media-1024:bg-white-darker-opacity media-1024:min-h-screen media-1024:w-screen opacity-1 media-1024:opacity-0 media-1024:invisible media-1024:translate-x-full transition-opa-trans duration-300 media-1024:overflow-y-auto media-1024:overflow-x-hidden"
         >
-          <li class="group relative">
-            <button
-              class="flex items-center justify-center gap-[0.3125rem] cursor-pointer hover:text-beige-darker transition-all duration-300"
-            >
-              <span>Oferta</span
-              ><ion-icon name="chevron-down-outline"></ion-icon>
-            </button>
-            <div
-              class="invisible absolute w-64 h-0 py-0 px-4 top-16 left-1/2 text-center transform -translate-x-1/2 opacity-0 group-hover:h-[11.625rem] group-hover:py-4 group-hover:opacity-100 group-hover:delay-0 group-hover:visible transition-all delay-300 duration-300 bg-white-opacity border-green border-solid border-l-0 border-r-0 border-t-2 border-b-4 overflow-hidden"
-            >
-              <span class="text-base font-semibold">Działamy kompleksowo!</span>
-              <ul class="flex flex-col gap-2 list-none my-3">
-                <li>&rarr; Projekty</li>
-                <li>&rarr; Wizualizacje</li>
-                <li>&rarr; Realizacje</li>
-              </ul>
-              <a
-                class="text-base text-green font-semibold pb-1 border-b border-transparent hover:border-green transition-all duration-300"
-                href="#section-offer"
-                >Sprawdź naszą ofertę</a
-              >
-            </div>
-          </li>
-          <li class="hover:text-beige-darker transition-all duration-300">
-            <a href="#section-about">O firmie</a>
-          </li>
-          <li class="hover:text-beige-darker transition-all duration-300">
-            <a href="#section-realisations">Realizacje</a>
-          </li>
-          <li class="hover:text-beige-darker transition-all duration-300">
-            <a href="#section-footer">Kontakt</a>
-          </li>
-          <li class="">
-            <form class="flex items-center justify-center gap-2 -ml-1">
-              <input
-                id="search-input"
-                name="search-input"
-                class="invisible w-0 px-0 py-1 border-b-2 border-beige outline-none transition-search-input duration-300 ease-in-out break-all bg-transparent font-semibold placeholder:font-normal"
-                type="text"
-                placeholder="Szukaj..."
-                minlength="3"
-                maxlength="30"
-              />
+          <ul
+            class="flex items-center justify-center gap-12 text-sm animate-nav-links-load opacity-0 media-1024:flex-col media-1024:text-xl media-1024:gap-4 media-1024:w-screen media-1024:min-h-screen h-auto"
+          >
+            <li class="group relative media-1024:hidden">
               <button
-                type="submit"
-                class="magnifier flex items-center justify-center text-2xl hover:text-beige-darker duration-300"
+                class="flex items-center justify-center gap-[0.3125rem] cursor-pointer hover:text-beige-darker transition-all duration-300"
               >
-                <ion-icon name="search-outline"></ion-icon>
+                <span>Oferta</span
+                ><ion-icon name="chevron-down-outline"></ion-icon>
               </button>
-            </form>
-          </li>
-        </ul>
+              <div
+                class="invisible absolute w-64 h-0 py-0 px-4 top-16 left-1/2 text-center transform -translate-x-1/2 opacity-0 group-hover:h-[11.625rem] group-hover:py-4 group-hover:opacity-100 group-hover:delay-0 group-hover:visible transition-all delay-300 duration-300 bg-white-darker-opacity border-white border-2 border-b-4 rounded-lg overflow-hidden"
+              >
+                <span class="text-base font-semibold text-green-darker"
+                  >Działamy kompleksowo!</span
+                >
+                <ul class="flex flex-col gap-2 list-none my-3">
+                  <li>&rarr; Projekty</li>
+                  <li>&rarr; Wizualizacje</li>
+                  <li>&rarr; Realizacje</li>
+                </ul>
+                <a
+                  class="text-base text-green-darker font-semibold pb-1 border-b border-green-darker hover:border-transparent transition-colors duration-300"
+                  href="#section-offer"
+                  >Sprawdź naszą ofertę</a
+                >
+              </div>
+            </li>
+            <li class="hidden media-1024:block">
+              <a
+                class="hover:text-beige-darker transition-colors duration-300 media-1024:w-72 media-1024:text-center media-1024:border-2 media-1024:py-[0.5625rem] media-1024:block media-1024:bg-white-darker-opacity media-1024:rounded-3xl media-360:w-64"
+                href="#section-offer"
+                >Oferta</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-beige-darker transition-colors duration-300 media-1024:w-72 media-1024:text-center media-1024:border-2 media-1024:py-[0.5625rem] media-1024:block media-1024:bg-white-darker-opacity media-1024:rounded-3xl media-360:w-64"
+                href="#section-about"
+                >O firmie</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-beige-darker transition-colors duration-300 media-1024:w-72 media-1024:text-center media-1024:border-2 media-1024:py-[0.5625rem] media-1024:block media-1024:bg-white-darker-opacity media-1024:rounded-3xl media-360:w-64"
+                href="#section-realisations"
+                >Realizacje</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-beige-darker transition-colors duration-300 media-1024:w-72 media-1024:text-center media-1024:border-2 media-1024:py-[0.5625rem] media-1024:block media-1024:bg-white-darker-opacity media-1024:rounded-3xl media-360:w-64"
+                href="#section-footer"
+                >Kontakt</a
+              >
+            </li>
+            <li
+              class="media-1024:text-base media-1024:w-72 media-1024:text-center media-1024:border-2 media-1024:py-1.5 media-1024:block media-1024:bg-white-darker-opacity media-1024:rounded-3xl media-360:w-64 relative"
+            >
+              <form class="flex items-center justify-center gap-2 -ml-1">
+                <input
+                  id="search-input"
+                  name="search-input"
+                  class="invisible w-0 px-0 py-1 border-b-2 border-beige outline-none transition-search-input duration-300 ease-in-out break-all bg-transparent font-semibold placeholder:font-normal"
+                  type="text"
+                  placeholder="Szukaj..."
+                  maxlength="30"
+                  value=""
+                />
+                <button
+                  type="submit"
+                  class="magnifier flex items-center justify-center text-2xl hover:text-beige-darker transition-colors duration-300 media-1024:text-3xl"
+                >
+                  <ion-icon name="search-outline"></ion-icon>
+                </button>
+              </form>
+
+              <div
+                class="query-error invisible opacity-0 right-0 top-[69px] absolute p-4 bg-white-darker-opacity min-w-[14rem] border-white border-2 border-b-4 rounded-lg text-center text-sm italic transition-opacity duration-500 media-1024:top-16"
+              >
+                <span>
+                  Niestety nie znaleziono wyszukiwanej frazy, spróbuj
+                  ponownie...
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <button
+          class="btn-toggle-nav h-12 w-12 text-[2.375rem] hidden media-1024:flex items-center justify-end opacity-0 animate-nav-links-load transition-all duration-500"
+        >
+          <ion-icon
+            class="btn-expand-nav absolute transition-all duration-300 hover:text-beige-darker"
+            name="menu-outline"
+          ></ion-icon>
+
+          <ion-icon
+            class="btn-close-nav absolute opacity-0 invisible transition-all duration-300 hover:text-beige-darker"
+            name="close-outline"
+          ></ion-icon>
+        </button>
       </nav>
     </header>
 
     <section
       id="section-intro"
-      class="flex items-center justify-end gap-16 bg-beige mt-[4.875rem]"
+      class="flex items-center justify-end gap-16 bg-beige mt-[4.875rem] media-1024:flex-col media-1024:pt-16 media-1024:pb-20 media-1024:px-8 media-550:px-4 media-550:pb-12 media-550:pt-8 media-550:gap-10 media-360:px-3 media-360:pt-6 media-360:pb-10"
     >
       <div
-        class="flex flex-col items-center gap-[4.5rem] w-[37.5rem] mx-auto pl-16 opacity-0 animate-intro-text-load"
+        class="flex flex-col items-start gap-[4.5rem] pl-16 max-w-[37.5rem] mx-auto opacity-0 animate-intro-text-load media-1024:pl-0 media-1024:items-center media-1024:text-center media-550:gap-8"
       >
-        <div class="flex items-center justify-center flex-col gap-11">
-          <h1 class="font-montserrat text-6xl font-medium leading-[1.15]">
+        <div
+          class="flex flex-col justify-center gap-11 media-1024:items-center media-550:gap-7"
+        >
+          <h1
+            class="font-montserrat text-6xl font-medium leading-[1.15] media-550:text-5xl media-550:leading-[1.2] media-450:text-[2.5rem] media-360:text-4xl media-360:leading-[1.3]"
+          >
             Nowoczesna aranżacja <br />
             Twojego ogrodu
           </h1>
-          <p class="text-base">
+          <p class="text-base max-w-[30.625rem] media-360:text-sm">
             Marka GiardDesign to wieloletnie doświadczenie i&nbsp;wysoka
             estetyka realizacji. Oferujemy kompleksowy zakres usług
             z&nbsp;indywidualnym podejściem do każdego projektu.
           </p>
         </div>
-        <div
-          class="flex items-center justify-center gap-9 ml-0 mr-auto text-base"
-        >
-          <!-- <button tabindex="-1">
-            <a
-              class="bg-green text-white-darker border border-solid border-green rounded-3xl pt-3 pb-3.5 px-[1.375rem] block hover:bg-green-darker hover:border-green-darker transition-colors duration-300"
-              href="#section-footer"
-            >
-              <span>Skontaktuj się z nami</span>
-            </a>
-          </button> -->
 
+        <div
+          class="flex flex-wrap items-center media-1024:justify-center gap-9 text-base media-360:text-sm media-550:gap-5"
+        >
           <button tabindex="-1">
             <a
               class="group relative overflow-hidden bg-green text-white-darker border border-solid border-green rounded-3xl pt-3 pb-3.5 px-[1.375rem] block"
@@ -140,7 +204,6 @@
               ></span>
             </a>
           </button>
-
           <button tabindex="-1">
             <a
               class="bg-beige text-green group border border-solid border-green rounded-3xl pt-3 pb-3.5 px-[1.375rem] flex items-center gap-2 hover:text-white-darker hover:bg-green transition-colors duration-300"
@@ -157,143 +220,142 @@
       </div>
 
       <div
-        class="slider relative overflow-hidden w-[43rem] h-[46.0625rem] opacity-0 animate-intro-slider-load"
+        class="slider relative overflow-hidden w-[43rem] h-[46.0625rem] opacity-0 animate-intro-slider-load media-1024:w-full media-1024:h-full media-1024:max-w-[37.5rem] media-1024:rounded-lg"
       >
-        <!-- w-[43rem] h-[46.0625rem] -->
         <figure
-          class="slide blur-load w-full h-full bg-cover bg-center duration-500"
+          class="slide blur-load w-full h-full pt-[100%] bg-cover bg-center transition-transform duration-500"
           style="
-            background-image: url(/src/assets/slider-images/slider-1-small.jpg);
+            background-image: url(./public/assets/images/slider-images/slider-1-small.jpg);
           "
         >
           <img
-            src="src/assets/slider-images/slider-1.webp"
+            src="./public/assets/images/slider-images/slider-1.webp"
             alt="Zdjęcie pięknie zaprojektowanego ogrodu"
-            class="block w-full h-full object-center object-cover opacity-0 transition-all"
+            class="absolute top-0 left-0 block w-full h-full object-center object-cover opacity-0 transition-all duration-500"
             loading="lazy"
           />
         </figure>
         <figure
-          class="slide blur-load absolute top-0 right-0 w-full h-full bg-cover bg-center duration-500"
+          class="slide blur-load absolute top-0 right-0 w-full h-full pt-[100%] bg-cover bg-center transition-transform duration-500"
           style="
-            background-image: url(src/assets/slider-images/slider-2-small.jpg);
+            background-image: url(./public/assets/images/slider-images/slider-2-small.jpg);
           "
         >
           <img
-            src="src/assets/slider-images/slider-2.webp"
+            src="./public/assets/images/slider-images/slider-2.webp"
             alt="Zdjęcie pięknie zaprojektowanego ogrodu"
-            class="w-full h-full object-center object-cover opacity-0 transition-all duration-500"
+            class="absolute top-0 left-0 block w-full h-full object-center object-cover opacity-0 transition-all duration-500"
             loading="lazy"
           />
         </figure>
         <figure
-          class="slide blur-load absolute top-0 right-0 w-full h-full bg-cover bg-center duration-500"
+          class="slide blur-load absolute top-0 right-0 w-full h-full pt-[100%] bg-cover bg-center transition-transform duration-500"
           style="
-            background-image: url(src/assets/slider-images/slider-3-small.jpg);
+            background-image: url(./public/assets/images/slider-images/slider-3-small.jpg);
           "
         >
           <img
-            src="src/assets/slider-images/slider-3.webp"
+            src="./public/assets/images/slider-images/slider-3.webp"
             alt="Zdjęcie pięknie zaprojektowanego ogrodu"
-            class="w-full h-full object-center object-cover opacity-0 transition-all duration-500"
+            class="absolute top-0 left-0 block w-full h-full object-center object-cover opacity-0 transition-all duration-500"
             loading="lazy"
           />
         </figure>
         <figure
-          class="slide blur-load absolute top-0 right-0 w-full h-full bg-cover bg-center duration-500"
+          class="slide blur-load absolute top-0 right-0 w-full h-full pt-[100%] bg-cover bg-center transition-transform duration-500"
           style="
-            background-image: url(src/assets/slider-images/slider-4-small.jpg);
+            background-image: url(./public/assets/images/slider-images/slider-4-small.jpg);
           "
         >
           <img
-            src="src/assets/slider-images/slider-4.webp"
+            src="./public/assets/images/slider-images/slider-4.webp"
             alt="Zdjęcie pięknie zaprojektowanego ogrodu"
-            class="w-full h-full object-center object-cover opacity-0 transition-all duration-500"
+            class="absolute top-0 left-0 block w-full h-full object-center object-cover opacity-0 transition-all duration-500"
             loading="lazy"
           />
         </figure>
         <figure
-          class="slide blur-load absolute top-0 right-0 w-full h-full bg-cover bg-center duration-500"
+          class="slide blur-load absolute top-0 right-0 w-full h-full pt-[100%] bg-cover bg-center transition-transform duration-500"
           style="
-            background-image: url(src/assets/slider-images/slider-5-small.jpg);
+            background-image: url(./public/assets/images/slider-images/slider-5-small.jpg);
           "
         >
           <img
-            src="src/assets/slider-images/slider-5.webp"
+            src="./public/assets/images/slider-images/slider-5.webp"
             alt="Zdjęcie pięknie zaprojektowanego ogrodu"
-            class="w-full h-full object-center object-cover opacity-0 transition-all duration-500"
+            class="absolute top-0 left-0 block w-full h-full object-center object-cover opacity-0 transition-all duration-500"
             loading="lazy"
           />
         </figure>
         <figure
-          class="slide blur-load absolute top-0 right-0 w-full h-full bg-cover bg-center duration-500"
+          class="slide blur-load absolute top-0 right-0 w-full h-full pt-[100%] bg-cover bg-center transition-transform duration-500"
           style="
-            background-image: url(src/assets/slider-images/slider-6-small.jpg);
+            background-image: url(./public/assets/images/slider-images/slider-6-small.jpg);
           "
         >
           <img
-            src="src/assets/slider-images/slider-6.webp"
+            src="./public/assets/images/slider-images/slider-6.webp"
             alt="Zdjęcie pięknie zaprojektowanego ogrodu"
-            class="w-full h-full object-center object-cover opacity-0 transition-all duration-500"
+            class="absolute top-0 left-0 block w-full h-full object-center object-cover opacity-0 transition-all duration-500"
             loading="lazy"
           />
         </figure>
         <figure
-          class="slide blur-load absolute top-0 right-0 w-full h-full bg-cover bg-center duration-500"
+          class="slide blur-load absolute top-0 right-0 w-full h-full pt-[100%] bg-cover bg-center transition-transform duration-500"
           style="
-            background-image: url(src/assets/slider-images/slider-7-small.jpg);
+            background-image: url(./public/assets/images/slider-images/slider-7-small.jpg);
           "
         >
           <img
-            src="src/assets/slider-images/slider-7.webp"
+            src="./public/assets/images/slider-images/slider-7.webp"
             alt="Zdjęcie pięknie zaprojektowanego ogrodu"
-            class="w-full h-full object-center object-cover opacity-0 transition-all duration-500"
+            class="absolute top-0 left-0 block w-full h-full object-center object-cover opacity-0 transition-all duration-500"
             loading="lazy"
           />
         </figure>
         <figure
-          class="slide blur-load absolute top-0 right-0 w-full h-full bg-cover bg-center duration-500"
+          class="slide blur-load absolute top-0 right-0 w-full h-full pt-[100%] bg-cover bg-center transition-transform duration-500"
           style="
-            background-image: url(src/assets/slider-images/slider-8-small.jpg);
+            background-image: url(./public/assets/images/slider-images/slider-8-small.jpg);
           "
         >
           <img
-            src="src/assets/slider-images/slider-8.webp"
+            src="./public/assets/images/slider-images/slider-8.webp"
             alt="Zdjęcie pięknie zaprojektowanego ogrodu"
-            class="w-full h-full object-center object-cover opacity-0 transition-all duration-500"
+            class="absolute top-0 left-0 block w-full h-full object-center object-cover opacity-0 transition-all duration-500"
             loading="lazy"
           />
         </figure>
         <figure
-          class="slide blur-load absolute top-0 right-0 w-full h-full bg-cover bg-center duration-500"
+          class="slide blur-load absolute top-0 right-0 w-full h-full pt-[100%] bg-cover bg-center transition-transform duration-500"
           style="
-            background-image: url(src/assets/slider-images/slider-9-small.jpg);
+            background-image: url(./public/assets/images/slider-images/slider-9-small.jpg);
           "
         >
           <img
-            src="src/assets/slider-images/slider-9.webp"
+            src="./public/assets/images/slider-images/slider-9.webp"
             alt="Zdjęcie pięknie zaprojektowanego ogrodu"
-            class="w-full h-full object-center object-cover opacity-0 transition-all duration-500"
+            class="absolute top-0 left-0 block w-full h-full object-center object-cover opacity-0 transition-all duration-500"
             loading="lazy"
           />
         </figure>
 
         <div
-          class="slider-dots-container absolute left-1/2 -translate-x-1/2 bottom-7 px-4 py-2 rounded-lg flex items-center justify-center gap-1 h-auto w-auto bg-black-opacity"
+          class="slider-dots-container absolute left-1/2 -translate-x-1/2 bottom-7 px-4 py-2 rounded-lg flex items-center justify-center gap-1 h-auto w-auto bg-black-opacity media-1200:left-28 media-1024:left-1/2 media-1024:bottom-5 media-1024:px-2 media-1024:py-1 media-550:left-[4.75rem] media-360:bottom-3.5"
         >
-          <!-- Button dots added dinamically from JS -->
+          <!-- Slider dots added from JS -->
         </div>
 
         <div
-          class="absolute right-0 bottom-0 flex items-center justify-center gap-8 py-6 px-8 bg-white-darker rounded-tl-lg"
+          class="absolute right-0 bottom-0 flex items-center justify-center gap-8 py-6 px-8 bg-white-darker rounded-tl-lg text-4xl media-1024:py-4 media-1024:px-6 media-1024:text-3xl media-1024:gap-6 media-360:py-2 media-360:px-4 media-360:gap-4 media-360:text-[1.75rem]"
         >
           <button
-            class="slider-btn-left flex text-4xl hover:-translate-x-1 transition-transform duration-300"
+            class="slider-btn-left flex hover:-translate-x-1 transition-transform duration-300"
           >
             <ion-icon name="arrow-back-outline"></ion-icon>
           </button>
           <button
-            class="slider-btn-right flex text-4xl hover:translate-x-1 transition-transform duration-300"
+            class="slider-btn-right flex hover:translate-x-1 transition-transform duration-300"
           >
             <ion-icon name="arrow-forward-outline"></ion-icon>
           </button>
@@ -303,49 +365,58 @@
 
     <section
       id="section-offer"
-      class="bg-white-darker flex flex-col items-center gap-24 pt-[7.5rem] pb-40"
+      class="bg-white-darker flex flex-col items-center gap-24 pt-[7.5rem] pb-40 media-1024:px-8 media-1024:py-20 media-1024:text-center media-550:px-4 media-550:gap-16 media-550:py-12 media-360:px-3 media-360:py-10 media-360:gap-10"
     >
-      <div
-        class="offer-text-container max-w-[65rem] m-auto flex flex-col gap-4 translate-y-1/2 opacity-0 transition-all duration-500"
-      >
-        <span class="text-xs text-green font-semibold">Oferta</span>
-        <div class="flex flex-col gap-8 max-w-[45rem]">
-          <h2 class="font-montserrat text-5xl font-medium">
+      <div class="max-w-[65rem] m-auto flex flex-col gap-4">
+        <span
+          class="obs-thresh-1 text-xs text-green font-semibold translate-y-full opacity-0 transition-opa-trans duration-500"
+          >Oferta
+        </span>
+
+        <div class="flex flex-col gap-8 max-w-[45rem] media-550:gap-7">
+          <h2
+            class="obs-thresh-05 font-montserrat text-5xl leading-[1.2] font-medium translate-y-full opacity-0 transition-opa-trans duration-500 media-550:text-[2.5rem] media-360:text-3xl"
+          >
             Działamy <span class="font-inter italic">kompleksowo</span>
           </h2>
-          <p class="text-base">
+          <p
+            class="obs-thresh-0 text-base translate-y-full opacity-0 transition-opa-trans duration-500 media-360:text-sm"
+          >
             Oferujemy kompletną obsługę inwestycji terenów zielonych.
             Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne.
             Stworzymy dla Ciebie projekt, zwizualizujemy go i&nbsp;wcielimy
-            w&nbsp;życie, a&nbsp;na każdym etapie posłużymy radą i&nbsp;
-            wieloletnim doświadczeniem.
+            w&nbsp;życie, a&nbsp;na każdym etapie posłużymy radą
+            i&nbsp;wieloletnim doświadczeniem.
           </p>
         </div>
       </div>
 
       <div
-        class="offer-cards-container flex flex-wrap items-center justify-center gap-16 px-[5.5rem] translate-y-1/2 opacity-0 transition-all duration-500"
+        class="flex flex-wrap items-center justify-center gap-16 px-[5.5rem] transition-all duration-500 media-1024:px-0 media-550:gap-12 media-360:gap-8"
       >
         <div
-          class="w-[23.625rem] h-[23.125rem] flex items-start flex-col justify-between px-10 py-12 bg-white rounded-3xl hover:-translate-y-5 transition-transform duration-500"
+          class="obs-thresh-0 w-[23.625rem] h-[23.125rem] flex items-start flex-col justify-between px-10 py-12 bg-white rounded-3xl hover:-translate-y-5 transition-all duration-500 opacity-0 translate-y-1/2 media-1024:items-center media-450:w-80 media-360:w-full media-360:h-96 media-360:px-8"
         >
           <div class="flex flex-col gap-8">
-            <div class="h-11 w-auto flex items-center">
+            <div
+              class="h-11 w-11 flex items-center media-1024:justify-center media-1024:mx-auto media-550:h-8 media-550:w-8"
+            >
               <img
-                src="./src/assets/icon-projects.png"
+                src="./public/assets/icons/icon-projects.png"
                 alt=""
                 aria-hidden="true"
               />
             </div>
             <div class="flex flex-col gap-3">
-              <h3 class="font-montserrat text-[1.75rem]">Projekty</h3>
+              <h3 class="font-montserrat text-[1.75rem] media-360:text-2xl">
+                Projekty
+              </h3>
               <p class="text-sm">
                 Zaprojektujemy Twój ogród w nowoczesnym stylu
                 i&nbsp;z&nbsp;najlepszym wykorzystaniem istniejącej przestrzeni.
               </p>
             </div>
           </div>
-
           <button tabindex="-1">
             <a
               href="#"
@@ -360,25 +431,28 @@
         </div>
 
         <div
-          class="w-[23.625rem] h-[23.125rem] flex items-start flex-col justify-between px-10 py-12 bg-white rounded-3xl hover:-translate-y-5 transition-transform duration-500"
+          class="obs-thresh-0 w-[23.625rem] h-[23.125rem] flex items-start flex-col justify-between px-10 py-12 bg-white rounded-3xl hover:-translate-y-5 transition-all duration-500 opacity-0 translate-y-1/2 media-1024:items-center media-450:w-80 media-360:w-full media-360:h-96 media-360:px-8"
         >
           <div class="flex flex-col gap-8">
-            <div class="h-11 w-auto flex items-center">
+            <div
+              class="h-11 w-12 flex items-center media-1024:justify-center media-1024:mx-auto media-550:h-8 media-550:w-9"
+            >
               <img
-                src="./src/assets/icon-visualizations.png"
+                src="./public/assets/icons/icon-visualizations.png"
                 alt=""
                 aria-hidden="true"
               />
             </div>
             <div class="flex flex-col gap-3">
-              <h3 class="font-montserrat text-[1.75rem]">Wizualizacje</h3>
+              <h3 class="font-montserrat text-[1.75rem] media-360:text-2xl">
+                Wizualizacje
+              </h3>
               <p class="text-sm">
                 Przedstawimy Ci projekty koncepcyjne w&nbsp;postaci wirtualnego
                 spaceru animowanego w technologii 3D.
               </p>
             </div>
           </div>
-
           <button tabindex="-1">
             <a
               href="#"
@@ -393,25 +467,28 @@
         </div>
 
         <div
-          class="w-[23.625rem] h-[23.125rem] flex items-start flex-col justify-between px-10 py-12 bg-white rounded-3xl hover:-translate-y-5 transition-transform duration-500"
+          class="obs-thresh-0 w-[23.625rem] h-[23.125rem] flex items-start flex-col justify-between px-10 py-12 bg-white rounded-3xl hover:-translate-y-5 transition-all duration-500 opacity-0 translate-y-1/2 media-1024:items-center media-450:w-80 media-360:w-full media-360:h-96 media-360:px-8"
         >
           <div class="flex flex-col gap-8">
-            <div class="h-11 w-auto flex items-center">
+            <div
+              class="h-11 w-11 flex items-center media-1024:justify-center media-1024:mx-auto media-550:h-8 media-550:w-8"
+            >
               <img
-                src="./src/assets/icon-realisations.png"
+                src="./public/assets/icons/icon-realisations.png"
                 alt=""
                 aria-hidden="true"
               />
             </div>
             <div class="flex flex-col gap-3">
-              <h3 class="font-montserrat text-[1.75rem]">Realizacje</h3>
+              <h3 class="font-montserrat text-[1.75rem] media-360:text-2xl">
+                Realizacje
+              </h3>
               <p class="text-sm">
                 Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań
                 i&nbsp; zaawansowanych technologii.
               </p>
             </div>
           </div>
-
           <button tabindex="-1">
             <a
               href="#section-realisations"
@@ -429,29 +506,100 @@
 
     <section
       id="section-about"
-      class="flex items-center bg-green text-white-darker"
+      class="flex items-center justify-between bg-green text-white-darker overflow-hidden group/images media-1024:flex-col-reverse media-1024:text-center media-1024:gap-[4.5rem] media-1024:py-20 media-1024:px-8 media-550:px-4 media-550:py-12 media-550:gap-10 media-360:px-3 media-360:py-10"
     >
       <div
-        class="blur-load bg-cover bg-center w-[43rem] h-[45rem]"
-        style="background-image: url(src/assets/section-about-img-small.jpg)"
+        class="obs-thresh-0 w-[43rem] h-[45rem] overflow-hidden opacity-0 translate-y-1/2 transition-transform ease-out duration-500 media-1024:w-full media-1024:h-full media-1024:max-w-[37.5rem] media-1024:rounded-lg"
       >
-        <img
-          src="src/assets/section-about-img.webp"
-          alt="Widok ładnie zaprojektowanego domu z ogrodem"
-          class="w-full h-full object-center object-cover opacity-0 transition-all duration-500"
-        />
+        <figure
+          class="blur-load w-full h-full pt-[100%] bg-cover bg-center"
+          style="
+            background-image: url(./public/assets/images/section-about-img-small.jpg);
+          "
+        >
+          <img
+            src="./public/assets/images/section-about-img.webp"
+            alt="Widok pięknie zaprojektowanego domu z ogrodem"
+            class="absolute top-0 left-0 w-full h-full object-center object-cover opacity-0 transition-all duration-500"
+          />
+
+          <div
+            class="blur-load bg-cover bg-center absolute left-0 w-1/2 h-1/2 -top-[50%] transition-all duration-500 ease-in-out group-hover/images:top-0"
+            style="
+              background-image: url(./public/assets/images/slider-images/slider-3-small.jpg);
+            "
+          >
+            <img
+              class="w-full h-full object-center object-cover opacity-0"
+              src="./public/assets/images/slider-images/slider-3.webp"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="blur-load bg-cover bg-center absolute -right-1/2 top-0 w-1/2 h-1/2 transition-all duration-500 ease-in-out group-hover/images:right-0"
+            style="
+              background-image: url(./public/assets/images/slider-images/slider-5-small.jpg);
+            "
+          >
+            <img
+              class="w-full h-full object-center object-cover opacity-0"
+              src="./public/assets/images/slider-images/slider-5.webp"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="blur-load bg-cover bg-center absolute -left-1/2 bottom-0 w-1/2 h-1/2 transition-all duration-500 ease-in-out group-hover/images:left-0"
+            style="
+              background-image: url(./public/assets/images/slider-images/slider-7-small.jpg);
+            "
+          >
+            <img
+              class="w-full h-full object-center object-cover opacity-0"
+              src="./public/assets/images/slider-images/slider-7.webp"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="blur-load bg-cover bg-center absolute right-0 -bottom-1/2 w-1/2 h-1/2 transition-all duration-500 ease-in-out group-hover/images:bottom-0"
+            style="
+              background-image: url(./public/assets/images/slider-images/slider-4-small.jpg);
+            "
+          >
+            <img
+              class="w-full h-full object-center object-cover opacity-0"
+              src="./public/assets/images/slider-images/slider-4.webp"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+          </div>
+        </figure>
       </div>
 
       <div
-        class="about-text-container w-[37.25rem] flex flex-col gap-[4.5rem] px-12 m-auto opacity-0 translate-y-1/2 transition-all duration-500"
+        class="max-w-[37.25rem] flex flex-col gap-[4.5rem] m-auto transition-all duration-500 delay-300 media-1600:pl-24 media-1600:pr-12 media-1024:px-0 media-1024:items-center media-1024:gap-10 media-550:gap-8"
       >
         <div class="flex flex-col gap-4">
-          <span class="text-xs font-medium">O firmie</span>
-          <div class="flex flex-col gap-10">
-            <h2 class="font-montserrat text-5xl">
+          <span
+            class="obs-thresh-1 translate-y-full opacity-0 transition-opa-trans duration-500 text-xs font-medium"
+            >O firmie
+          </span>
+          <div class="flex flex-col gap-10 media-550:gap-7">
+            <h2
+              class="obs-thresh-1 translate-y-full opacity-0 transition-opa-trans duration-500 font-montserrat text-5xl leading-[1.2] font-medium media-550:text-[2.5rem] media-360:text-3xl"
+            >
               Tworzymy z&nbsp;<span class="font-inter italic">pasją</span>
             </h2>
-            <p class="text-base">
+
+            <p
+              class="obs-thresh-0 translate-y-1/2 opacity-0 transition-opa-trans duration-500 text-base media-360:text-sm"
+            >
               Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
               wykwalifikowani projektanci oraz architekci, których zadaniem jest
               rozpoznanie i&nbsp;realizacja potrzeb każdego Klienta. Nasza
@@ -462,9 +610,11 @@
           </div>
         </div>
 
-        <div>
+        <div
+          class="obs-thresh-05 translate-y-1/2 opacity-0 transition-opa-trans duration-500"
+        >
           <button
-            class="btn-meet-us flex items-center gap-2 px-[1.375rem] pt-3 pb-3.5 border border-solid rounded-3xl hover:bg-green-darker transition-colors duration-300 group"
+            class="btn-meet-us flex items-center gap-2 px-[1.375rem] pt-3 pb-3.5 border border-solid rounded-3xl hover:bg-green-darker transition-colors duration-300 group text-base media-360:text-sm"
           >
             <span>Poznaj nas bliżej</span>
             <ion-icon
@@ -478,188 +628,189 @@
 
     <section
       id="section-realisations"
-      class="relative bg-beige flex flex-col pt-[7.5rem] pb-11 overflow-hidden"
+      class="relative bg-beige flex flex-col pt-[7.5rem] pb-11 px-16 overflow-hidden media-1440:px-12 media-1024:pt-16 media-1024:px-8 media-550:px-4 media-550:pt-12 media-360:px-3 media-360:py-10"
     >
       <div
-        class="realisations-text-container flex flex-col gap-4 pl-40 mb-24 opacity-0 translate-y-full transition-all duration-500"
+        class="obs-thresh-05 flex flex-col gap-4 pl-40 mb-24 opacity-0 translate-y-full transition-all duration-500 media-1024:text-center media-1024:items-center media-1024:pl-0 media-1024:mb-16 media-550:mb-10"
       >
         <span class="text-xs text-green font-semibold">Realizacje</span>
-        <h2 class="text-5xl font-montserrat font-medium">
+        <h2
+          class="font-montserrat text-5xl leading-[1.2] font-medium media-550:text-[2.5rem] media-360:text-3xl"
+        >
           Nasze <span class="font-inter italic">projekty</span>
         </h2>
       </div>
 
       <div
-        class="gallery relative grid grid-cols-4 gap-8 px-16 1600:grid-cols-3 transition-[height] duration-1000"
+        class="gallery relative grid grid-cols-4 gap-8 media-1600:grid-cols-3 media-1200:gap-6 media-1024:gap-4 media-750:grid-cols-2 media-750:gap-6 media-550:gap-4 media-450:gap-3 media-360:gap-2"
       >
         <button
-          class="gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden opacity-0 translate-y-1/3 transition-all duration-500 cursor-magnifier"
+          class="obs-thresh-0 gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden rounded-3xl opacity-0 translate-y-1/4 transition-all duration-500 cursor-magnifier"
           style="
-            background-image: url(src/assets/gallery-images/gallery-1-small.webp);
+            background-image: url(./public/assets/images/gallery-images/gallery-1-small.webp);
           "
         >
           <img
-            src="src/assets/gallery-images/gallery-1.webp"
+            src="./public/assets/images/gallery-images/gallery-1.webp"
             alt="Zdjecie pięknie zaprojektowanego ogrodu"
             class="absolute top-0 left-0 w-full h-full block object-center object-cover opacity-0 hover:scale-110 transition-all duration-500"
             loading="lazy"
           />
         </button>
         <button
-          class="gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden opacity-0 translate-y-1/3 transition-all duration-500 cursor-magnifier"
+          class="obs-thresh-0 gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden rounded-3xl opacity-0 translate-y-1/4 transition-all duration-500 cursor-magnifier"
           style="
-            background-image: url(src/assets/gallery-images/gallery-2-small.webp);
+            background-image: url(./public/assets/images/gallery-images/gallery-2-small.webp);
           "
         >
           <img
-            src="src/assets/gallery-images/gallery-2.webp"
+            src="./public/assets/images/gallery-images/gallery-2.webp"
             alt="Zdjecie pięknie zaprojektowanego ogrodu"
             class="absolute top-0 left-0 w-full h-full block object-center object-cover opacity-0 hover:scale-110 transition-all duration-500"
             loading="lazy"
           />
         </button>
         <button
-          class="gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden opacity-0 translate-y-1/3 transition-all duration-500 cursor-magnifier"
+          class="obs-thresh-0 gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden rounded-3xl opacity-0 translate-y-1/4 transition-all duration-500 cursor-magnifier"
           style="
-            background-image: url(src/assets/gallery-images/gallery-3-small.webp);
+            background-image: url(./public/assets/images/gallery-images/gallery-3-small.webp);
           "
         >
           <img
-            src="src/assets/gallery-images/gallery-3.webp"
+            src="./public/assets/images/gallery-images/gallery-3.webp"
             alt="Zdjecie pięknie zaprojektowanego ogrodu"
             class="absolute top-0 left-0 w-full h-full block object-center object-cover opacity-0 hover:scale-110 transition-all duration-500"
             loading="lazy"
           />
         </button>
         <button
-          class="gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden opacity-0 translate-y-1/3 transition-all duration-500 cursor-magnifier"
+          class="obs-thresh-0 gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden rounded-3xl opacity-0 translate-y-1/4 transition-all duration-500 cursor-magnifier"
           style="
-            background-image: url(src/assets/gallery-images/gallery-4-small.webp);
+            background-image: url(./public/assets/images/gallery-images/gallery-4-small.webp);
           "
         >
           <img
-            src="src/assets/gallery-images/gallery-4.webp"
+            src="./public/assets/images/gallery-images/gallery-4.webp"
             alt="Zdjecie pięknie zaprojektowanego ogrodu"
             class="absolute top-0 left-0 w-full h-full block object-center object-cover opacity-0 hover:scale-110 transition-all duration-500"
             loading="lazy"
           />
         </button>
         <button
-          class="gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden opacity-0 translate-y-1/3 transition-all duration-500 cursor-magnifier"
+          class="obs-thresh-0 gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden rounded-3xl opacity-0 translate-y-1/4 transition-all duration-500 cursor-magnifier"
           style="
-            background-image: url(src/assets/gallery-images/gallery-5-small.webp);
+            background-image: url(./public/assets/images/gallery-images/gallery-5-small.webp);
           "
         >
           <img
-            src="src/assets/gallery-images/gallery-5.webp"
+            src="./public/assets/images/gallery-images/gallery-5.webp"
             alt="Zdjecie pięknie zaprojektowanego ogrodu"
             class="absolute top-0 left-0 w-full h-full block object-center object-cover opacity-0 hover:scale-110 transition-all duration-500"
             loading="lazy"
           />
         </button>
         <button
-          class="gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden opacity-0 translate-y-1/3 transition-all duration-500 cursor-magnifier"
+          class="obs-thresh-0 gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden rounded-3xl opacity-0 translate-y-1/4 transition-all duration-500 cursor-magnifier"
           style="
-            background-image: url(src/assets/gallery-images/gallery-6-small.webp);
+            background-image: url(./public/assets/images/gallery-images/gallery-6-small.webp);
           "
         >
           <img
-            src="src/assets/gallery-images/gallery-6.webp"
+            src="./public/assets/images/gallery-images/gallery-6.webp"
             alt="Zdjecie pięknie zaprojektowanego ogrodu"
             class="absolute top-0 left-0 w-full h-full block object-center object-cover opacity-0 hover:scale-110 transition-all duration-500"
             loading="lazy"
           />
         </button>
         <button
-          class="gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden opacity-0 translate-y-1/3 transition-all duration-500 cursor-magnifier"
+          class="obs-thresh-0 gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden rounded-3xl opacity-0 translate-y-1/4 transition-all duration-500 cursor-magnifier"
           style="
-            background-image: url(src/assets/gallery-images/gallery-7-small.webp);
+            background-image: url(./public/assets/images/gallery-images/gallery-7-small.webp);
           "
         >
           <img
-            src="src/assets/gallery-images/gallery-7.webp"
+            src="./public/assets/images/gallery-images/gallery-7.webp"
             alt="Zdjecie pięknie zaprojektowanego ogrodu"
             class="absolute top-0 left-0 w-full h-full block object-center object-cover opacity-0 hover:scale-110 transition-all duration-500"
             loading="lazy"
           />
         </button>
         <button
-          class="gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden opacity-0 translate-y-1/3 transition-all duration-500 cursor-magnifier"
+          class="obs-thresh-0 gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden rounded-3xl opacity-0 translate-y-1/4 transition-all duration-500 cursor-magnifier"
           style="
-            background-image: url(src/assets/gallery-images/gallery-8-small.webp);
+            background-image: url(./public/assets/images/gallery-images/gallery-8-small.webp);
           "
         >
           <img
-            src="src/assets/gallery-images/gallery-8.webp"
+            src="./public/assets/images/gallery-images/gallery-8.webp"
             alt="Zdjecie pięknie zaprojektowanego ogrodu"
             class="absolute top-0 left-0 w-full h-full block object-center object-cover opacity-0 hover:scale-110 transition-all duration-500"
             loading="lazy"
           />
         </button>
         <button
-          class="gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden opacity-0 translate-y-1/3 transition-all duration-500 cursor-magnifier"
+          class="obs-thresh-0 gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden rounded-3xl opacity-0 translate-y-1/4 transition-all duration-500 cursor-magnifier"
           style="
-            background-image: url(src/assets/gallery-images/gallery-9-small.webp);
+            background-image: url(./public/assets/images/gallery-images/gallery-9-small.webp);
           "
         >
           <img
-            src="src/assets/gallery-images/gallery-9.webp"
+            src="./public/assets/images/gallery-images/gallery-9.webp"
             alt="Zdjecie pięknie zaprojektowanego ogrodu"
             class="absolute top-0 left-0 w-full h-full block object-center object-cover opacity-0 hover:scale-110 transition-all duration-500"
             loading="lazy"
           />
         </button>
         <button
-          class="gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden opacity-0 translate-y-1/3 transition-all duration-500 cursor-magnifier"
+          class="obs-thresh-0 gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden rounded-3xl opacity-0 translate-y-1/4 transition-all duration-500 cursor-magnifier"
           style="
-            background-image: url(src/assets/gallery-images/gallery-10-small.webp);
+            background-image: url(./public/assets/images/gallery-images/gallery-10-small.webp);
           "
         >
           <img
-            src="src/assets/gallery-images/gallery-10.webp"
+            src="./public/assets/images/gallery-images/gallery-10.webp"
             alt="Zdjecie pięknie zaprojektowanego ogrodu"
             class="absolute top-0 left-0 w-full h-full block object-center object-cover opacity-0 hover:scale-110 transition-all duration-500"
             loading="lazy"
           />
         </button>
         <button
-          class="gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden opacity-0 translate-y-1/3 transition-all duration-500 cursor-magnifier"
+          class="obs-thresh-0 gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden rounded-3xl opacity-0 translate-y-1/4 transition-all duration-500 cursor-magnifier"
           style="
-            background-image: url(src/assets/gallery-images/gallery-11-small.webp);
+            background-image: url(./public/assets/images/gallery-images/gallery-11-small.webp);
           "
         >
           <img
-            src="src/assets/gallery-images/gallery-11.webp"
+            src="./public/assets/images/gallery-images/gallery-11.webp"
             alt="Zdjecie pięknie zaprojektowanego ogrodu"
             class="absolute top-0 left-0 w-full h-full block object-center object-cover opacity-0 hover:scale-110 transition-all duration-500"
             loading="lazy"
           />
         </button>
         <button
-          class="gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden opacity-0 translate-y-1/3 transition-all duration-500 cursor-magnifier"
+          class="obs-thresh-0 gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden rounded-3xl opacity-0 translate-y-1/4 transition-all duration-500 cursor-magnifier"
           style="
-            background-image: url(src/assets/gallery-images/gallery-12-small.webp);
+            background-image: url(./public/assets/images/gallery-images/gallery-12-small.webp);
           "
         >
           <img
-            src="src/assets/gallery-images/gallery-12.webp"
+            src="./public/assets/images/gallery-images/gallery-12.webp"
             alt="Zdjecie pięknie zaprojektowanego ogrodu"
             class="absolute top-0 left-0 w-full h-full block object-center object-cover opacity-0 hover:scale-110 transition-all duration-500"
             loading="lazy"
           />
         </button>
 
-        <!-- class="linear-gradient w-full h-1/2 absolute left-0 bottom-0" -->
         <span
           class="gradient bg-gradient-to-b from-beige-transparent to-beige w-full h-1/2 absolute left-0 bottom-0"
         ></span>
 
         <button
-          class="btn-expand-gallery group absolute left-1/2 -translate-x-1/2 bottom-11 flex items-center gap-2 px-[1.375rem] pt-3 pb-3.5 text-base border border-solid rounded-3xl hover:text-green transition-colors duration-300"
+          class="btn-expand-gallery group absolute left-1/2 -translate-x-1/2 bottom-11 flex items-center gap-2 px-[1.375rem] pt-3 pb-3.5 text-base border border-solid rounded-3xl hover:text-green transition-colors duration-300 media-1024:bottom-0 media-550:text-sm media-550:px-4 media-550:pt-2 media-550:pb-2.5"
         >
           <span>Rozwiń</span>
           <ion-icon
-            class="text-lg group-hover:translate-y-2 transition-transform duration-300"
+            class="text-lg group-hover:translate-y-2 transition-transform duration-300 media-550:text-base"
             name="arrow-down-outline"
           ></ion-icon>
         </button>
@@ -669,63 +820,78 @@
         class="loading-spinner hidden mt-11 mx-auto animate-spin w-16 h-16 border-t-4 border-green border-solid rounded-full"
       ></span>
 
-      <span class="bg-beige absolute left-0 bottom-0 w-full h-11"></span>
+      <span
+        class="bg-beige absolute left-0 bottom-0 w-full h-11 media-360:h-10"
+      ></span>
 
       <div
-        class="gallery-popup fixed left-0 top-0 w-full h-full z-30 invisible opacity-0 flex items-center justify-center"
+        class="gallery-popup fixed left-0 bottom-0 w-full h-full z-30 invisible opacity-0 flex items-center 0 justify-center"
       >
-        <img
-          src="src/assets/gallery-images/gallery-1.webp"
-          alt="Zdjecie pięknie zaprojektowanego ogrodu"
-          class="block absolute h-[90%] object-center object-contain m-auto -translate-x-[9999px] transition-transform duration-300"
-        />
+        <div
+          class="pb-8 pt-16 px-16 left-0 w-full h-full top-0 flex items-center justify-center media-1024:px-8 media-550:px-6"
+        >
+          <span
+            class="image-number absolute top-[1.125rem] left-1/2 -translate-x-1/2 text-white-darker text-xl font-montserrat opacity-0 transition-opacity duration-300"
+            >xnx
+          </span>
+          <img
+            src=""
+            alt="Zdjecie pięknie zaprojektowanego ogrodu"
+            class="block h-full rounded-lg object-contain object-center transition-opacity opacity-0 duration-300 overflow-y-scroll"
+          />
+        </div>
 
         <button
-          class="btn-popup-left absolute left-0 top-1/2 -translate-y-1/2 text-6xl text-white-darker hover:scale-110 transition-transform duration-300"
+          class="btn-popup-left flex items-center justify-center absolute left-0 top-1/2 -translate-y-1/2 mt-4 text-6xl text-white-darker hover:scale-110 transition-opa-trans duration-300 media-1024:text-5xl media-1024:-left-2 media-550:text-4xl media-550:-left-1.5"
         >
           <ion-icon name="chevron-back-outline"></ion-icon>
         </button>
 
         <button
-          class="btn-popup-right absolute right-0 top-1/2 -translate-y-1/2 text-6xl text-white-darker hover:scale-110 transition-transform duration-300"
+          class="btn-popup-right flex items-center justify-center absolute right-0 top-1/2 -translate-y-1/2 mt-4 text-6xl text-white-darker hover:scale-110 transition-opa-trans duration-300 media-1024:text-5xl media-1024:-right-2 media-550:text-4xl media-550:-right-1.5"
         >
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </button>
 
         <button
-          class="btn-close-popup absolute top-1 right-2 text-6xl text-white-darker hover:scale-110 transition-transform duration-300"
+          class="btn-close-popup flex items-center justify-center absolute top-0.5 right-0.5 text-6xl text-white-darker hover:scale-110 transition-opa-trans duration-300 media-1024:text-5xl media-1024:top-2 media-550:text-4xl media-550:top-[0.8125rem]"
         >
           <ion-icon name="close-outline"></ion-icon>
         </button>
       </div>
 
       <span
-        class="popup-overlay fixed left-0 top-0 w-full h-full z-20 bg-black-overlay invisible opacity-0 transition-all duration-300"
+        class="popup-overlay fixed left-0 top-0 w-full h-full z-20 bg-black-overlay invisible opacity-0 transition-all duration-500"
       ></span>
     </section>
 
     <section
       id="section-instagram"
-      class="bg-white-darker text-white-darker py-[3.75rem] overflow-hidden"
+      class="bg-white-darker text-white-darker py-[3.75rem] overflow-hidden media-1440:px-12 media-1024:px-8 media-550:px-4 media-550:py-12 media-360:px-3 media-360:py-10"
     >
       <div
-        class="group relative bg-green max-w-[65rem] m-auto flex items-center gap-16 py-[7.5rem] px-[6.875rem] overflow-hidden"
+        class="group relative bg-green max-w-[65rem] m-auto flex items-center gap-16 py-[7.5rem] px-[6.875rem] overflow-hidden media-1024:flex-col media-1024:justify-center media-1024:text-center media-1024:gap-10 media-1024:py-20 media-1024:px-16 media-750:py-16 media-750:px-12 media-550:py-12 media-550:px-10 media-550:gap-6"
       >
-        <h4 class="font-montserrat text-[2.5rem] tracking-[-2px] z-10">
-          Zostańmy w kontakcie! Znajdziesz nas na
+        <h4
+          class="z-10 font-montserrat text-[2.5rem] tracking-[-2px] leading-[1.2] media-550:text-[2rem] media-360:text-[1.75rem]"
+        >
+          Zostańmy w&nbsp;kontakcie! <br />
+          Znajdziesz nas na
           <span class="font-inter font-medium italic tracking-[1px]"
             >Instagramie</span
           >.
         </h4>
 
-        <div class="flex flex-col items-start gap-6 min-w-[9.8125rem]">
-          <span class="text-base tracking-[-1px]"
-            >Śledź nasze <br />
+        <div
+          class="z-10 flex flex-col items-start gap-6 min-w-[9.8125rem] text-base media-1024:flex-row media-1024:justify-center media-1024:items-center media-550:text-sm media-550:flex-wrap"
+        >
+          <span class="leading-[1.5] tracking-[-1px]">
+            Śledź nasze <br />
             najnowsze realizacje!
           </span>
           <button tabindex="-1">
             <a
-              class="btn-instagram bg-white-darker border border-solid border-white-darker rounded-3xl text-green px-6 pt-2.5 pb-3 hover:bg-green hover:text-white-darker transition-colors duration-300"
+              class="btn-instagram bg-white-darker border border-solid border-white-darker rounded-3xl text-green px-6 pt-2.5 pb-3 hover:bg-transparent hover:text-white-darker transition-colors duration-300"
               target="_blank"
               href="https://www.instagram.com/"
               >Instagram</a
@@ -734,56 +900,56 @@
         </div>
 
         <div
-          class="blur-load bg-cover bg-center absolute left-5 top-[360px] h-40 w-40 z-0 opacity-50 group-hover:top-5 transition-all duration-300 delay-500 ease-in"
+          class="blur-load bg-cover bg-center absolute left-5 top-full h-40 w-40 z-0 opacity-50 group-hover:top-5 transition-[top] duration-300 delay-500 ease-in media-850:h-32 media-850:w-32 media-550:h-24 media-550:w-24 media-550:group-hover:top-2.5 media-550:left-2.5 media-400:h-20 media-400:w-20 media-400:group-hover:delay-100"
           style="
-            background-image: url(src/assets/gallery-images/gallery-2-small.webp);
+            background-image: url(./public/assets/images/gallery-images/gallery-2-small.webp);
           "
         >
           <img
-            class="object-center object-cover opacity-0"
-            src="src/assets/gallery-images/gallery-2.webp"
+            class="block w-full h-full object-center object-cover opacity-0"
+            src="./public/assets/images/gallery-images/gallery-2.webp"
             alt=""
             aria-hidden="true"
             loading="lazy"
           />
         </div>
         <div
-          class="blur-load bg-cover bg-center absolute left-[200px] top-[440px] -translate-y-1/2 h-40 w-40 z-0 opacity-50 group-hover:top-1/2 transition-all duration-300 delay-300 ease-in"
+          class="blur-load bg-cover bg-center absolute top-[125%] left-[12.5rem] -translate-y-1/2 h-40 w-40 z-0 opacity-50 group-hover:top-1/2 transition-[top] duration-300 delay-300 ease-in media-850:h-32 media-850:w-32 media-850:left-[9.875rem] media-550:h-24 media-550:w-24 media-550:left-[7.25rem] media-400:h-20 media-400:w-20 media-400:left-[3.125rem] media-400:group-hover:top-36"
           style="
-            background-image: url(src/assets/gallery-images/gallery-11-small.webp);
+            background-image: url(./public/assets/images/gallery-images/gallery-11-small.webp);
           "
         >
           <img
-            class="object-center object-cover opacity-0"
-            src="src/assets/gallery-images/gallery-11.webp"
+            class="block w-full h-full object-center object-cover opacity-0"
+            src="./public/assets/images/gallery-images/gallery-11.webp"
             alt=""
             aria-hidden="true"
             loading="lazy"
           />
         </div>
         <div
-          class="blur-load bg-cover bg-center absolute left-[380px] -bottom-[160px] h-40 w-40 z-0 opacity-50 group-hover:bottom-0 transition-all duration-300 delay-0 ease-in group-hover:delay-500"
+          class="blur-load bg-cover bg-center absolute left-[23.75rem] -bottom-[50%] h-40 w-40 z-0 opacity-50 group-hover:bottom-0 transition-[bottom] duration-300 delay-0 ease-in group-hover:delay-500 media-850:h-32 media-850:w-32 media-850:left-[18.5rem] media-850:group-hover:bottom-5 media-550:h-24 media-550:w-24 media-550:left-[13.875rem] media-400:h-20 media-400:w-20 media-400:left-[9.375rem] media-400:group-hover:bottom-28"
           style="
-            background-image: url(src/assets/gallery-images/gallery-7-small.webp);
+            background-image: url(./public/assets/images/gallery-images/gallery-7-small.webp);
           "
         >
           <img
-            class="object-center object-cover opacity-0"
-            src="src/assets/gallery-images/gallery-7.webp"
+            class="block w-full h-full object-center object-cover opacity-0"
+            src="./public/assets/images/gallery-images/gallery-7.webp"
             alt=""
             aria-hidden="true"
             loading="lazy"
           />
         </div>
         <div
-          class="blur-load bg-cover bg-center absolute left-[400px] top-[360px] h-40 w-40 z-0 opacity-50 group-hover:top-0 transition-all duration-300 delay-300 ease-in"
+          class="blur-load bg-cover bg-center absolute left-[25rem] top-full h-40 w-40 z-0 opacity-50 group-hover:top-0 transition-[top] duration-300 delay-300 ease-in media-850:h-32 media-850:w-32 media-850:left-[19.125rem] media-850:group-hover:top-5 media-550:h-24 media-550:w-24 media-550:left-[15.125rem] media-550:group-hover:top-5 media-400:h-20 media-400:w-20 media-400:left-[8.125rem]"
           style="
-            background-image: url(src/assets/gallery-images/gallery-3-small.webp);
+            background-image: url(./public/assets/images/gallery-images/gallery-3-small.webp);
           "
         >
           <img
-            class="object-center object-cover opacity-0"
-            src="src/assets/gallery-images/gallery-3.webp"
+            class="block w-full h-full object-center object-cover opacity-0"
+            src="./public/assets/images/gallery-images/gallery-3.webp"
             alt=""
             aria-hidden="true"
             loading="lazy"
@@ -794,15 +960,21 @@
 
     <footer
       id="section-footer"
-      class="bg-black-lighter text-white-darker flex flex-col justify-center gap-[7.5rem] py-20"
+      class="bg-black-lighter text-white-darker flex flex-col justify-center gap-[7.5rem] py-20 media-1440:px-12 media-1024:text-center media-1024:gap-24 media-1024:px-8 media-1024:py-16 media-550:gap-20 media-550:py-12 media-550:px-4 media-360:px-3 media-360:py-10 media-360:gap-16"
     >
-      <div class="max-w-[65rem] mx-auto w-full flex flex-col gap-[3.875rem]">
-        <div class="flex items-center justify-between">
+      <div
+        class="max-w-[65rem] mx-auto w-full flex flex-col gap-[3.875rem] media-1024:gap-12"
+      >
+        <div
+          class="flex items-center flex-wrap justify-between gap-8 media-850:flex-col"
+        >
           <img
-            src="src/assets/logo-giarddesign-white.png"
+            src="./public/assets/images/logo-giarddesign-white.png"
             alt="Logo firmy Giard Design"
           />
-          <div class="flex items-center justify-center gap-6 text-base">
+          <div
+            class="flex items-center justify-center gap-6 text-base flex-wrap"
+          >
             <span>Daj znać, co możemy dla Ciebie zrobić!</span>
             <button tabindex="-1">
               <a
@@ -816,8 +988,12 @@
 
         <span class="w-full h-[1px] bg-white-darker"></span>
 
-        <div class="flex items-center justify-between text-sm">
-          <ul class="flex items-center justify-center gap-12">
+        <div
+          class="flex items-center justify-between gap-8 text-sm media-850:flex-col text-center"
+        >
+          <ul
+            class="flex items-center justify-center gap-x-12 gap-y-2 flex-wrap"
+          >
             <li
               class="hover:text-green-contrast transition-colors duration-300"
             >
@@ -836,13 +1012,13 @@
             <li
               class="hover:text-green-contrast transition-colors duration-300"
             >
-              <a target="_blank" href="https://www.linkedin.com/feed/"
-                >Linkedin</a
-              >
+              <a target="_blank" href="https://www.linkedin.com/">Linkedin</a>
             </li>
           </ul>
 
-          <ul class="flex items-center justify-center gap-12">
+          <ul
+            class="flex items-center justify-center gap-x-12 gap-y-2 flex-wrap"
+          >
             <li
               class="hover:text-green-contrast transition-colors duration-300"
             >
@@ -858,7 +1034,7 @@
       </div>
 
       <div
-        class="max-w-[65rem] my-0 mx-auto w-full flex items-center justify-between text-base"
+        class="max-w-[65rem] my-0 mx-auto w-full flex items-center justify-between text-base media-550:flex-col media-550:gap-2"
       >
         <div>
           <span>Prawa zastrzeżone &copy; </span>
@@ -868,7 +1044,7 @@
           <span>made by</span>
           <img
             class="pt-1.5"
-            src="src/assets/logo-adrespect.png"
+            src="./public/assets/images/logo-adrespect.png"
             alt="Logo firmy adRespect"
           />
         </div>

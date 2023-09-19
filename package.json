@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "start": "npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch"
   },
   "author": "Adrian Prajsnar",
   "license": "ISC",

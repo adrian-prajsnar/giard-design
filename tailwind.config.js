@@ -4,17 +4,18 @@ export const content = ['./index.html', './src/**/*.{js,ts,jsx,tsx}'];
 
 export const theme = {
   screens: {
-    1600: { max: '1600px' },
-    '1450px': { max: '1450px' },
-    '1350px': { max: '1350px' },
-    '1200px': { max: '1200px' },
-    '1030px': { max: '1030px' },
-    '900px': { max: '900px' },
-    '750px': { max: '750px' },
-    '550px': { max: '550px' },
-    '450px': { max: '450px' },
-    '350px': { max: '350px' },
+    'media-1600': { max: '1600px' },
+    'media-1440': { max: '1440px' },
+    'media-1200': { max: '1200px' },
+    'media-1024': { max: '1024px' },
+    'media-850': { max: '850px' },
+    'media-750': { max: '750px' },
+    'media-550': { max: '550px' },
+    'media-450': { max: '450px' },
+    'media-400': { max: '400px' },
+    'media-360': { max: '360px' },
   },
+
   colors: {
     transparent: 'transparent',
     current: 'currentColor',
@@ -24,6 +25,7 @@ export const theme = {
     white: '#fff',
     'white-opacity': 'rgb(255, 255, 255, 0.9)',
     'white-darker': '#F5F0EC',
+    'white-darker-opacity': 'rgb(245, 240, 236, 0.9)',
     green: '#1B5B31',
     'green-lighter': '#326b46',
     'green-darker': '#18522c',
@@ -32,22 +34,27 @@ export const theme = {
     'beige-transparent': '#d6b79e00',
     'beige-darker': '#9a8778',
   },
+
   extend: {
     fontFamily: {
       inter: ['Inter', 'sans-serif'],
       montserrat: ['Montserrat', 'sans-serif'],
     },
+
     transitionProperty: {
       'search-input': 'width, padding, border',
+      'opa-trans': 'opacity, transform, background-color, visibility',
     },
+
     cursor: {
-      magnifier: 'url(/src/assets/magnifier-cursor-24.png), zoom-in',
+      magnifier: 'url(/public/assets/images/magnifier-cursor-24.png), pointer',
     },
+
     animation: {
       'logo-load': 'logo-load 300ms forwards 0ms  ease-in',
       'nav-links-load': 'nav-links-load 300ms forwards 300ms ease-in',
       'intro-text-load': 'intro-text-load 300ms forwards 600ms ease-out',
-      'intro-slider-load': 'intro-slider-load 300ms forwards 900ms ease-in-out',
+      'intro-slider-load': 'intro-slider-load 300ms forwards 900ms ease-out',
     },
   },
 };
