@@ -1,4 +1,4 @@
-# GiardDesign - landing page
+# GiardDesign - Landing page
 
 [giarddesign-ap11.netlify.app](https://giarddesign-ap11.netlify.app/)
 
@@ -7,8 +7,10 @@
 
 <h3>DEVELOPMENT GUIDE</h3>
 <p>To run and build Tailwind, please type in CLI:</p>
+
 ```
 npm install
 npm run start
 ```
+
 Then you can view this project simply by live server extension.
