@@ -1,7 +1,9 @@
+window.addEventListener('scroll', () => {
+  console.log('jurek');
+});
+
 // INTERSECTION OBSERVER
 const elementsWithThreshold0 = document.querySelectorAll('.obs-thresh-0');
-const elementsWithThreshold05 = document.querySelectorAll('.obs-thresh-05');
-const elementsWithThreshold1 = document.querySelectorAll('.obs-thresh-1');
 
 function observeElement(elements, threshold) {
   const observer = new IntersectionObserver(
@@ -24,8 +26,6 @@ function observeElement(elements, threshold) {
 }
 
 observeElement([...elementsWithThreshold0], 0);
-observeElement([...elementsWithThreshold05], 0.5);
-observeElement([...elementsWithThreshold1], 1);
 
 // LAZY LOADING IMAGES
 function loadLazyImages() {
