@@ -298,6 +298,13 @@ btnExpandGallery.addEventListener('click', () => {
   const galleryItemsHTML = [];
 
   loadingSpinner.classList.remove('hidden');
+  gradient.classList.add('opacity-0');
+  btnExpandGallery.classList.add('opacity-0');
+
+  setTimeout(() => {
+    gradient.classList.add('invisible');
+    btnExpandGallery.classList.add('invisible');
+  }, 500);
 
   for (let i = 13; i <= 24; i++) {
     const galleryItem = `
@@ -327,8 +334,6 @@ btnExpandGallery.addEventListener('click', () => {
       const galleryImages = document.querySelectorAll('.gallery-item');
       maxImages = galleryImages.length;
 
-      gradient.classList.add('invisible');
-      btnExpandGallery.classList.add('invisible');
       loadingSpinner.classList.add('hidden');
       observeElement([...galleryImages], 0);
       loadLazyImages();
