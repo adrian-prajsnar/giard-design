@@ -1,7 +1,3 @@
-window.addEventListener('scroll', () => {
-  console.log('jurek');
-});
-
 // INTERSECTION OBSERVER
 const elementsWithThreshold0 = document.querySelectorAll('.obs-thresh-0');
 
@@ -217,12 +213,14 @@ function goToSlide(slide) {
 }
 
 function nextSlide() {
+  deltaX = 0;
   curSlide === maxSlide - 1 ? (curSlide = 0) : curSlide++;
   goToSlide(curSlide);
   activateDot(curSlide);
 }
 
 function prevSlide() {
+  deltaX = 0;
   curSlide === 0 ? (curSlide = maxSlide - 1) : curSlide--;
   goToSlide(curSlide);
   activateDot(curSlide);
@@ -311,11 +309,11 @@ btnExpandGallery.addEventListener('click', () => {
         <button
           class="obs-thresh-0 gallery-item blur-load relative pt-[100%] bg-cover bg-center overflow-hidden rounded-3xl opacity-0 translate-y-1/4 transition-all duration-500 cursor-magnifier"
           style="
-            background-image: url(./public/assets/images/gallery-images/gallery-${i}-small.webp);
+            background-image: url(./public/assets/images/gallery-images/gallery-${i}-small.jpg);
           "
         >
           <img
-            src="./public/assets/images/gallery-images/gallery-${i}.webp"
+            src="./public/assets/images/gallery-images/gallery-${i}.jpg"
             alt="Zdjecie pięknie zaprojektowanego ogrodu"
             class="absolute top-0 left-0 w-full h-full block object-center object-cover opacity-0 hover:scale-110 transition-all duration-500"
             loading="lazy"
@@ -323,7 +321,7 @@ btnExpandGallery.addEventListener('click', () => {
         </button>
    `;
     galleryItemsHTML.push(galleryItem);
-    const imageSrc = `./public/assets/images/gallery-images/gallery-${i}.webp`;
+    const imageSrc = `./public/assets/images/gallery-images/gallery-${i}.jpg`;
     imagePromises.push(loadImageAsync(imageSrc));
   }
 
@@ -409,7 +407,7 @@ function updateDisplayedPopUpImage(image) {
   popUpImg.classList.add('opacity-0');
 
   setTimeout(() => {
-    const newSrc = `./public/assets/images/gallery-images/gallery-${image}.webp`;
+    const newSrc = `./public/assets/images/gallery-images/gallery-${image}.jpg`;
     popUpImg.src = newSrc;
     popUpImg.classList.remove('opacity-0');
     imgNumEl.textContent = `${image}/${maxImages}`;
@@ -418,6 +416,8 @@ function updateDisplayedPopUpImage(image) {
 }
 
 function nextImage() {
+  deltaX = 0;
+
   let currentImage = parseInt(popUpImg.src.match(/gallery-(\d+)/)[1]);
 
   if (currentImage === maxImages) return;
@@ -427,6 +427,8 @@ function nextImage() {
 }
 
 function prevImage() {
+  deltaX = 0;
+
   let currentImage = parseInt(popUpImg.src.match(/gallery-(\d+)/)[1]);
 
   if (currentImage === 1) return;
@@ -466,3 +468,45 @@ function restoreFocusToAllElements() {
 const curYearElement = document.querySelector('.current-year');
 const curYear = new Date().getFullYear();
 curYearElement.textContent = curYear;
+
+// MOBILE DRAGGING IMAGES (TOUCH EVENT)
+const threshold = 50;
+let isDragging = false;
+let startX, startY;
+let deltaX;
+
+function onTouchStart(element) {
+  element.addEventListener('touchstart', e => {
+    isDragging = true;
+    const touch = e.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
+  });
+}
+
+onTouchStart(popUpImg);
+onTouchStart(slider);
+
+function onTouchMove(element) {
+  element.addEventListener('touchmove', e => {
+    if (isDragging) {
+      const touch = e.touches[0];
+      const currentX = touch.clientX;
+      deltaX = currentX - startX;
+    }
+  });
+}
+
+onTouchMove(popUpImg);
+onTouchMove(slider);
+
+function onTouchEnd(element, callback, callback2) {
+  element.addEventListener('touchend', () => {
+    isDragging = false;
+    if (deltaX > threshold) callback();
+    if (deltaX < -threshold) callback2();
+  });
+}
+
+onTouchEnd(popUpImg, prevImage, nextImage);
+onTouchEnd(slider, prevSlide, nextSlide);
