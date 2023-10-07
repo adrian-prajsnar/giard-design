@@ -79,85 +79,63 @@ btnToggleNav.addEventListener('click', toggleNav);
 navItems.forEach(navItem => navItem.addEventListener('click', toggleNav));
 
 // NAVIGATION SEARCH BAR
-const sectionOfferQueries = [
-  'oferta',
-  'działamy kompleksowo',
-  'inwestycje',
-  'tereny zielone',
-  'ogród',
-  'nowoczesne ogrody',
-  'obsługa',
-  'wizualizacje',
-]
-  .join('')
-  .replaceAll(' ', '');
-
-const sectionAboutQueries = [
-  'o firmie',
-  'tworzymy z pasją',
-  'zespół',
-  'projektant',
-  'projektanci',
-  'architekt',
-  'architekci',
-  'specjalizacja',
-  'poznaj nas bliżej',
-]
-  .join('')
-  .replaceAll(' ', '');
-
-const sectionRealisationsQueries = [
-  'projekt',
-  'nasze projekty',
-  'realizacje',
-  'rozwiń',
-  'pokaż',
-  'zdjęcia',
-  'ogrody',
-]
-  .join('')
-  .replaceAll(' ', '');
-
-const sectionInstagramQueries = 'instagram';
-
-const sectionFooterQueries = [
-  'skontaktuj się z nami',
-  'kontakt',
-  'facebook',
-  'linkedin',
-  'numer telefonu',
-  'e-mail',
-  'email',
-]
-  .join('')
-  .replaceAll(' ', '');
-
 const form = document.querySelector('form');
 const searchInput = document.querySelector('#search-input');
 const queryError = document.querySelector('.query-error');
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
+async function fetchQueries() {
+  try {
+    const res = await fetch('data/queries.json');
+    if (!res.ok) throw new Error('There was a network problem.');
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    console.error('There was an error fetching the data:', err);
+  }
+}
 
-  const query = searchInput.value.toLowerCase().trim().replaceAll(' ', '');
+fetchQueries().then(data => {
+  const sectionOfferQueries = data.sectionOfferQueries
+    .join('')
+    .replaceAll(' ', '');
 
-  if (!query) toggleMagnifier();
-  else if (query.length > 2) {
-    if (sectionOfferQueries.includes(query)) moveToSection('offer');
-    else if (sectionAboutQueries.includes(query)) moveToSection('about');
-    else if (sectionRealisationsQueries.includes(query))
-      moveToSection('realisations');
-    else if (sectionInstagramQueries.includes(query))
-      moveToSection('instagram');
-    else if (sectionFooterQueries.includes(query)) moveToSection('footer');
-    else throwQueryError(query);
-  } else throwQueryError(query);
+  const sectionAboutQueries = data.sectionAboutQueries
+    .join('')
+    .replaceAll(' ', '');
 
-  searchInput.value = '';
-});
+  const sectionRealisationsQueries = data.sectionRealisationsQueries
+    .join('')
+    .replaceAll(' ', '');
 
-searchInput.addEventListener('error', () => {
-  throwQueryError();
+  const sectionInstagramQueries = data.sectionInstagramQueries;
+
+  const sectionFooterQueries = data.sectionFooterQueries
+    .join('')
+    .replaceAll(' ', '');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const query = searchInput.value.toLowerCase().trim().replaceAll(' ', '');
+    searchInput.value = '';
+
+    switch (true) {
+      case !query:
+        return toggleMagnifier();
+      case query.length > 2 && sectionOfferQueries.includes(query):
+        return moveToSection('offer');
+      case query.length > 2 && sectionAboutQueries.includes(query):
+        return moveToSection('about');
+      case query.length > 2 && sectionRealisationsQueries.includes(query):
+        return moveToSection('realisations');
+      case query.length > 2 && sectionInstagramQueries.includes(query):
+        return moveToSection('instagram');
+      case query.length > 2 && sectionFooterQueries.includes(query):
+        return moveToSection('footer');
+      default:
+        throwQueryError(query);
+    }
+  });
 });
 
 function toggleMagnifier() {

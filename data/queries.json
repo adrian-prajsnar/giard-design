@@ -1,0 +1,42 @@
+{
+  "sectionOfferQueries": [
+    "oferta",
+    "działamy kompleksowo",
+    "inwestycje",
+    "tereny zielone",
+    "ogród",
+    "nowoczesne ogrody",
+    "obsługa",
+    "wizualizacje"
+  ],
+  "sectionAboutQueries": [
+    "o firmie",
+    "tworzymy z pasją",
+    "zespół",
+    "projektant",
+    "projektanci",
+    "architekt",
+    "architekci",
+    "specjalizacja",
+    "poznaj nas bliżej"
+  ],
+  "sectionRealisationsQueries": [
+    "projekt",
+    "nasze projekty",
+    "realizacje",
+    "rozwiń",
+    "pokaż",
+    "zdjęcia",
+    "ogrody"
+  ],
+  "sectionInstagramQueries": "instagram",
+  "sectionFooterQueries": [
+    "skontaktuj się z nami",
+    "kontakt",
+    "facebook",
+    "linkedin",
+    "numer telefonu",
+    "e-mail",
+    "email"
+  ]
+}
