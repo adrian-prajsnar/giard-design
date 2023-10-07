@@ -56,16 +56,16 @@ Make sure you have the following software installed on your system:
    ```bash
    npm install
    ```
+   
+## Usage
 
-### Usage
+```bash
+npm run start
+```
 
-    ```
-    npm run start
-    ```
-
-    ```
-    live-server.cmd
-    ```
+```bash
+live-server.cmd
+```
 
 ## Contributing
 
@@ -82,7 +82,3 @@ I appreciate your contributions and will review and merge them as appropriate. L
 ## License
 
 This project is licensed under the MIT License.
-
-```
-
-```
