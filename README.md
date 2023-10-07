@@ -4,14 +4,13 @@
 
 ## Description
 
-GiardDesign is a dynamic landing page project created based on a provided blueprint from Figma. While the initial design concept was provided, I took charge of independently developing the website's logic, user experience, and mobile design. This project originated during a recruitment process for a certain company, and later, I proactively enhanced it by incorporating additional features and improvements. GiardDesign is built using **Tailwind CSS and vanilla JavaScript**, in alignment with the company's guidelines.
+GiardDesign is a dynamic landing page project created based on a provided blueprint from Figma. While the initial design concept was provided, I took charge of independently developing the website's logic, user experience, and mobile design. This project originated during a recruitment process for a certain company, and later, I proactively enhanced it by incorporating additional features and improvements. <br>
+GiardDesign is built using **Tailwind CSS & vanilla JavaScript**, in alignment with the company's guidelines.
 
-### Features
-
-GiardDesign comes with several great features:
+GiardDesign comes with several great **features**:
 
 - Search Navigation: Easily find what you need.
-- Dropdown: Organized access to particular section.
+- Dropdown: Quick information and access to a specific section.
 - Mobile Navigation: Smooth, elegant, and accessible.
 - Interactive Slider: Engaging content presentation.
 - Popup Gallery: Stunning image displays.
