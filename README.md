@@ -62,6 +62,7 @@ Make sure you have the following software installed on your system:
     ```
     npm run start
     ```
+
     ```
     live-server.cmd
     ```
